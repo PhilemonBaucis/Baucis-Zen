@@ -38,10 +38,10 @@ export default function ProductImageGallery({ images, title }) {
             alt={`${title} - View ${selectedImage + 1}`}
             className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
           />
-          {/* Stylish Zoom Button */}
+          {/* Stylish Zoom Button - visible on mobile, hover on desktop */}
           <button
             onClick={() => setIsZoomed(true)}
-            className="absolute bottom-4 right-4 px-4 py-2 bg-baucis-green-800/80 hover:bg-baucis-green-800 backdrop-blur-sm rounded-full shadow-lg flex items-center space-x-2 transition-all duration-300 hover:scale-105 opacity-0 group-hover:opacity-100"
+            className="absolute bottom-4 right-4 px-4 py-2 bg-baucis-green-800/80 hover:bg-baucis-green-800 backdrop-blur-sm rounded-full shadow-lg flex items-center space-x-2 transition-all duration-300 hover:scale-105 opacity-100 sm:opacity-0 sm:group-hover:opacity-100"
             aria-label={tProducts('viewImage') || 'Zoom image'}
           >
             <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">

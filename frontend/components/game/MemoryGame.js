@@ -615,8 +615,8 @@ export default function MemoryGame() {
         </div>
       </div>
       
-      {/* Game Board - 6x3 grid */}
-      <div className="grid grid-cols-6 gap-2">
+      {/* Game Board - responsive grid: 3 cols on mobile, 4 on sm, 6 on md+ */}
+      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-2">
         {deck.map((card, index) => (
           <MemoryCard
             key={card.id}
@@ -671,7 +671,7 @@ export default function MemoryGame() {
           
           {/* Demo grid for guests */}
           {!isLoggedIn && (
-            <div className="grid grid-cols-6 gap-2 opacity-30 blur-[2px]">
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-2 opacity-30 blur-[2px]">
               {Array.from({ length: 18 }).map((_, i) => (
                 <div key={i} className="aspect-square rounded-xl bg-gradient-to-br from-baucis-green-500 to-baucis-green-700" />
               ))}

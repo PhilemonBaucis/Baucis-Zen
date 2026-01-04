@@ -81,9 +81,9 @@ export default function ChatBox({
         }
       `}} />
       
-      <div 
-        className="fixed bottom-4 right-4 z-50 w-[340px] max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-2xl border border-baucis-green-100 flex flex-col overflow-hidden animate-[slideUp_0.3s_ease-out]"
-        style={{ maxHeight: 'min(520px, calc(100vh - 2rem))' }}
+      <div
+        className="fixed z-50 bg-white rounded-2xl shadow-2xl border border-baucis-green-100 flex flex-col overflow-hidden animate-[slideUp_0.3s_ease-out] w-full sm:w-[340px] left-0 right-0 sm:left-auto sm:right-4 bottom-0 sm:bottom-4 rounded-b-none sm:rounded-b-2xl"
+        style={{ maxHeight: 'min(520px, calc(100vh - 2rem))', maxHeight: 'min(520px, calc(100dvh - env(safe-area-inset-bottom, 0px) - 2rem))' }}
       >
         {/* Header - with Baucis Zen logo */}
         <div className="bg-gradient-to-r from-baucis-green-600 to-baucis-green-700 px-4 py-3 flex items-center justify-between">

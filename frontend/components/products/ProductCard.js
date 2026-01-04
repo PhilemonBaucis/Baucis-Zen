@@ -56,21 +56,21 @@ export default function ProductCard({ product }) {
         {/* Navigation Arrows - Only show if multiple images */}
         {hasMultipleImages && (
           <>
-            {/* Left Arrow */}
+            {/* Left Arrow - visible on mobile, hover on desktop */}
             <button
               onClick={goToPrevious}
-              className="absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"
+              className="absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-md opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 z-10"
               aria-label="Previous image"
             >
               <svg className="w-4 h-4 text-baucis-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
             </button>
-            
-            {/* Right Arrow */}
+
+            {/* Right Arrow - visible on mobile, hover on desktop */}
             <button
               onClick={goToNext}
-              className="absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"
+              className="absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-md opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 z-10"
               aria-label="Next image"
             >
               <svg className="w-4 h-4 text-baucis-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">

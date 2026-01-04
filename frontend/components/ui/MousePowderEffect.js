@@ -1,11 +1,29 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export default function MousePowderEffect() {
   const canvasRef = useRef(null);
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
+
+  // Detect touch devices and disable effect on mobile
+  useEffect(() => {
+    const checkTouch = () => {
+      setIsTouchDevice(
+        'ontouchstart' in window ||
+        navigator.maxTouchPoints > 0 ||
+        window.matchMedia('(pointer: coarse)').matches
+      );
+    };
+    checkTouch();
+    window.addEventListener('resize', checkTouch);
+    return () => window.removeEventListener('resize', checkTouch);
+  }, []);
 
   useEffect(() => {
+    // Don't run on touch devices to save performance and avoid issues
+    if (isTouchDevice) return;
+
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -122,21 +140,25 @@ export default function MousePowderEffect() {
       document.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('resize', resizeCanvas);
     };
-  }, []);
+  }, [isTouchDevice]);
+
+  // Don't render anything on touch devices
+  if (isTouchDevice) return null;
 
   return (
-    <div style={{ 
-      position: 'fixed', 
-      top: 0, 
-      left: 0, 
-      width: '100vw', 
-      height: '100vh', 
-      zIndex: 9999, 
-      pointerEvents: 'none' 
+    <div style={{
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      zIndex: 9999,
+      pointerEvents: 'none',
+      overflow: 'hidden'
     }}>
       <canvas
         ref={canvasRef}
-        style={{ 
+        style={{
           width: '100%',
           height: '100%',
           display: 'block'

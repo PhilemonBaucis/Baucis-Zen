@@ -189,7 +189,7 @@ export default function HeroCarousel() {
 
         {/* 3D Carousel - clipped to prevent overflow */}
         <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-16 overflow-hidden">
-        <div className="relative h-[86vh]">
+        <div className="relative h-[100dvh] sm:h-[86vh]">
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="relative w-full h-full">
               {slides.map(renderSlide)}
