@@ -185,9 +185,10 @@ export default function ChatBot() {
   
   if (typeof window === 'undefined') return null;
   
-  // Hide on checkout page or when cart drawer is open
+  // Hide on checkout page, maintenance page, or when cart drawer is open
   const isCheckoutPage = pathname?.includes('/checkout');
-  if (isDrawerOpen || isCheckoutPage) return null;
+  const isMaintenancePage = pathname?.includes('/maintenance');
+  if (isDrawerOpen || isCheckoutPage || isMaintenancePage) return null;
   
   // Sign-in prompt for guests - compact brand style
   if (showSignInPrompt) {

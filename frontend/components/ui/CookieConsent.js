@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
@@ -8,6 +9,7 @@ const CONSENT_KEY = 'baucis_cookie_consent';
 
 export default function CookieConsent() {
   const t = useTranslations('cookies');
+  const pathname = usePathname();
   const [mounted, setMounted] = useState(false);
   const [showBanner, setShowBanner] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
@@ -72,6 +74,10 @@ export default function CookieConsent() {
   
   // Don't render anything until mounted (prevents hydration mismatch)
   if (!mounted) return null;
+
+  // Hide on maintenance page
+  const isMaintenancePage = pathname?.includes('/maintenance');
+  if (isMaintenancePage) return null;
   
   const saveConsent = (prefs) => {
     localStorage.setItem(CONSENT_KEY, JSON.stringify(prefs));
