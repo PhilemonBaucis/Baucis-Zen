@@ -1,11 +1,5 @@
 import '../globals.css';
-import { CartProvider } from '@/lib/cart-context';
-import { AuthProvider } from '@/lib/auth-context';
-import { StoreConfigProvider } from '@/lib/store-config';
-import { ToastProvider } from '@/components/ui/Toast';
-import CartDrawer from '@/components/cart/CartDrawer';
-import CookieConsent from '@/components/ui/CookieConsent';
-import ChatBot from '@/components/chat/ChatBot';
+import ClientProviders from '@/components/layout/ClientProviders';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
 import { locales } from '@/i18n/request';
@@ -38,20 +32,38 @@ export default async function LocaleLayout({ children, params }) {
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body suppressHydrationWarning>
+      {/* Add inline script to handle loading state - runs before React hydrates */}
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              // Add loading class immediately
+              document.body?.classList.add('js-loading');
+              // Remove it once DOM is fully loaded (before React hydrates)
+              if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', function() {
+                  document.body.classList.remove('js-loading');
+                  document.body.setAttribute('data-hydrated', 'true');
+                });
+              } else {
+                // Already loaded
+                document.body?.classList.remove('js-loading');
+                document.body?.setAttribute('data-hydrated', 'true');
+              }
+              // Failsafe: Remove loading class after 3 seconds no matter what
+              setTimeout(function() {
+                document.body?.classList.remove('js-loading');
+                document.body?.setAttribute('data-hydrated', 'true');
+              }, 3000);
+            `,
+          }}
+        />
+      </head>
+      <body className="js-loading" suppressHydrationWarning>
         <NextIntlClientProvider messages={messages}>
-          <StoreConfigProvider>
-            <AuthProvider>
-              <CartProvider>
-                <ToastProvider>
-                  {children}
-                  <CartDrawer />
-                  <CookieConsent />
-                  <ChatBot />
-                </ToastProvider>
-              </CartProvider>
-            </AuthProvider>
-          </StoreConfigProvider>
+          <ClientProviders>
+            {children}
+          </ClientProviders>
         </NextIntlClientProvider>
       </body>
     </html>

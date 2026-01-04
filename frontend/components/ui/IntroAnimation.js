@@ -1,13 +1,19 @@
 'use client';
 
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState, useCallback, useMemo } from 'react';
 import { useTranslations } from 'next-intl';
-import Spline from '@splinetool/react-spline';
+import dynamic from 'next/dynamic';
+
+// Dynamically import Spline to avoid SSR issues
+const Spline = dynamic(() => import('@splinetool/react-spline'), {
+  ssr: false,
+  loading: () => null,
+});
 
 // Spline scene URL
 // R2: https://pub-c38e558a5a5e4ecdbce8dfd1e185a8fe.r2.dev/spline/baucis_tin_/public/scene.splinecode
 // Note: R2 requires CORS configuration. Using Spline CDN until CORS is set up.
-const SPLINE_SCENE_URL = process.env.NEXT_PUBLIC_SPLINE_INTRO_URL || 
+const SPLINE_SCENE_URL = process.env.NEXT_PUBLIC_SPLINE_INTRO_URL ||
   'https://prod.spline.design/WaQq94a9PKQnK95i/scene.splinecode';
 
 // Animation duration in milliseconds (7.5 seconds)
@@ -16,13 +22,62 @@ const ANIMATION_DURATION = 8000;
 // Base resolution for scaling reference
 const BASE_WIDTH = 1920;
 
+// Detect if device is mobile or has low performance indicators
+function detectMobile() {
+  if (typeof window === 'undefined') {
+    return { isMobile: false, shouldSkipSpline: false, isLowPower: false };
+  }
+
+  // Check for touch device
+  const isTouchDevice =
+    'ontouchstart' in window ||
+    navigator.maxTouchPoints > 0 ||
+    window.matchMedia('(pointer: coarse)').matches;
+
+  // Check for small screen
+  const isSmallScreen = window.innerWidth < 768;
+
+  // Check for reduced motion preference
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Check for low memory (if available)
+  const hasLowMemory = navigator.deviceMemory && navigator.deviceMemory < 4;
+
+  // Check for slow connection
+  const hasSlowConnection =
+    navigator.connection &&
+    (navigator.connection.saveData ||
+      navigator.connection.effectiveType === 'slow-2g' ||
+      navigator.connection.effectiveType === '2g' ||
+      navigator.connection.effectiveType === '3g');
+
+  // Detect iOS Safari which has issues with WebGL in some cases
+  const isIOSSafari = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
+  // Mobile devices should skip Spline for better performance and reliability
+  const isMobile = isTouchDevice && isSmallScreen;
+
+  return {
+    isMobile,
+    // Skip Spline on: mobile devices, reduced motion preference, low memory, slow connection, or iOS
+    shouldSkipSpline: isMobile || prefersReducedMotion || hasLowMemory || hasSlowConnection || isIOSSafari,
+    isLowPower: hasLowMemory || hasSlowConnection,
+  };
+}
+
 export default function IntroAnimation({ onComplete }) {
   const [isLoading, setIsLoading] = useState(true);
   const [fadeOut, setFadeOut] = useState(false);
   const [hasError, setHasError] = useState(false);
   const [zoomScale, setZoomScale] = useState(1);
   const [showSkip, setShowSkip] = useState(false);
+  const [deviceInfo, setDeviceInfo] = useState({ isMobile: false, shouldSkipSpline: false, isLowPower: false });
   const t = useTranslations('intro');
+
+  // Detect device capabilities on mount
+  useEffect(() => {
+    setDeviceInfo(detectMobile());
+  }, []);
 
   // Show skip button after a short delay
   useEffect(() => {
@@ -51,7 +106,11 @@ export default function IntroAnimation({ onComplete }) {
   }, []);
 
   // Fallback: if loading takes too long, auto-complete
+  // Use aggressive timeouts to prevent blank screen on slow connections
+  // Mobile: 1.5s (skip spline), 3s (mobile), 6s (desktop) - reduced from 2/4/10
   useEffect(() => {
+    const timeoutDuration = deviceInfo.shouldSkipSpline ? 1500 : (deviceInfo.isMobile ? 3000 : 6000);
+
     const fallbackTimer = setTimeout(() => {
       console.warn('Spline intro timeout - completing automatically');
       try {
@@ -61,11 +120,20 @@ export default function IntroAnimation({ onComplete }) {
       setTimeout(() => {
         onComplete?.();
         window.dispatchEvent(new CustomEvent('intro-animation-complete'));
-      }, 600);
-    }, 12000); // 12 second fallback
+      }, 400);
+    }, timeoutDuration);
 
     return () => clearTimeout(fallbackTimer);
-  }, [onComplete]);
+  }, [onComplete, deviceInfo.isMobile, deviceInfo.shouldSkipSpline]);
+
+  // Skip Spline entirely on mobile/low-power devices - immediately show fallback and auto-complete
+  useEffect(() => {
+    if (deviceInfo.shouldSkipSpline && !hasError) {
+      console.log('Skipping Spline on mobile/low-power device');
+      setHasError(true); // Show fallback logo instead
+      setIsLoading(false);
+    }
+  }, [deviceInfo.shouldSkipSpline, hasError]);
 
   const handleComplete = useCallback(() => {
     // Mark as seen in localStorage

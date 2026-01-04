@@ -1,4 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@300;400;500;600;700&family=Caveat:wght@400;500;600;700&family=Dancing+Script:wght@400;500;600;700&family=Kalam:wght@300;400;700&family=Permanent+Marker&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* Critical: CSS-only loading indicator for when JavaScript hasn't loaded yet.
+   This prevents blank screens on mobile devices with slow/unreliable connections.
+
+   IMPORTANT: Using class-based approach instead of :has() for better mobile browser support.
+   :has() is not supported in Safari iOS < 15.4, Chrome Android < 105, Samsung Internet < 18.
+
+   The .js-loading class is added to body initially and removed by JavaScript on mount.
+   This provides a reliable fallback that works on all browsers. */
+@keyframes cssSpinner {
+  to { transform: rotate(360deg); }
+}
+
+/* Show spinner only when .js-loading class is present */
+body.js-loading::before {
+  content: '';
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 32px;
+  height: 32px;
+  margin: -16px 0 0 -16px;
+  border: 3px solid #e5e7eb;
+  border-top-color: #7ca163;
+  border-radius: 50%;
+  animation: cssSpinner 0.8s linear infinite;
+  z-index: 99999;
+}
+
+/* Fallback: Also hide spinner after 5 seconds regardless (prevents stuck spinner) */
+@keyframes hideSpinner {
+  0%, 99% { opacity: 1; }
+  100% { opacity: 0; display: none; }
+}
+
+body.js-loading::before {
+  animation: cssSpinner 0.8s linear infinite, hideSpinner 5s forwards;
+}
+
+/* Once React hydrates and adds data-content-loaded, ensure spinner is hidden */
+body[data-hydrated]::before {
+  display: none !important;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
