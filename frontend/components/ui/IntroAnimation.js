@@ -1,17 +1,30 @@
 'use client';
 
-import { useEffect, useState, useCallback, useMemo } from 'react';
+import { useEffect, useState, useCallback, useMemo, lazy, Suspense } from 'react';
 import { useTranslations } from 'next-intl';
-import dynamic from 'next/dynamic';
 
-// Dynamically import Spline with SSR disabled for client-only rendering
-const Spline = dynamic(
-  () => import('@splinetool/react-spline').then((mod) => mod.default),
-  {
-    ssr: false,
-    loading: () => null,
-  }
+// Lazy import Spline to avoid SSR issues and allow tree-shaking
+// Using React.lazy with Suspense for reliable client-only loading
+const SplineComponent = lazy(() =>
+  import('@splinetool/react-spline').then((mod) => ({ default: mod.default }))
 );
+
+// Wrapper that handles SSR gracefully
+function Spline(props) {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+
+  return (
+    <Suspense fallback={null}>
+      <SplineComponent {...props} />
+    </Suspense>
+  );
+}
 
 // Spline scene URL
 // R2: https://pub-c38e558a5a5e4ecdbce8dfd1e185a8fe.r2.dev/spline/baucis_tin_/public/scene.splinecode
