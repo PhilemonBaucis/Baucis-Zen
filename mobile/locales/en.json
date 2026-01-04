@@ -1,0 +1,994 @@
+{
+  "intro": {
+    "loading": "Preparing your zen experience...",
+    "skip": "Skip"
+  },
+  "promo": {
+    "freeShipping": "Free shipping on orders over €50",
+    "discount": "10% OFF on orders over €100"
+  },
+  "common": {
+    "home": "Home",
+    "shop": "Shop",
+    "cart": "Cart",
+    "addToCart": "Add to Cart",
+    "buyNow": "Buy Now",
+    "buyNowHint": "Buy Now purchases only this item (clears existing cart)",
+    "soldOut": "Sold Out",
+    "noImage": "No Image",
+    "beginJourney": "Begin Your Journey",
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "retry": "Try Again",
+    "viewAll": "View All",
+    "learnMore": "Learn More"
+  },
+  "header": {
+    "shopCollection": "Shop Collection",
+    "openCart": "Open cart"
+  },
+  "hero": {
+    "welcome": "Welcome to",
+    "tagline": "Discover the art of matcha and wellness",
+    "subtitle": "Premium ceremonial grade matcha, wellness kits, and mindful living essentials for your zen journey.",
+    "shopNow": "Shop Now",
+    "explorProducts": "Explore Products"
+  },
+  "about": {
+    "discoverBaucis": "Discover Baucis Zen",
+    "wellnessJourney": "Wellness is a Journey",
+    "description": "We believe in the power of intentional living—each moment, each choice, each breath an opportunity to cultivate inner peace and outer harmony.",
+    "ourMission": "Our Mission",
+    "missionDesc": "To bring authentic wellness experiences into everyday life. We curate products that nurture mind, body, and spirit, making the art of self-care accessible to everyone seeking balance in a busy world.",
+    "ourVision": "Our Vision",
+    "visionDesc": "A world where holistic well-being is woven into the fabric of daily existence. We envision communities embracing mindfulness, where inner peace and outer harmony become the foundation of a fulfilled life.",
+    "ourValues": "Our Values",
+    "valuesDesc": "Authenticity guides our curation. Sustainability shapes our choices. Mindfulness inspires our purpose. Every product we offer reflects our commitment to quality, ethics, and the genuine pursuit of wellness.",
+    "ourStory": "Our Story",
+    "storyDesc": "Born from a passion for traditional wellness practices and modern mindful living, Baucis Zen emerged to bridge ancient wisdom with contemporary needs. We believe everyone deserves moments of tranquility."
+  },
+  "products": {
+    "title": "Our Collection",
+    "subtitle": "Curated wellness essentials",
+    "noProducts": "No products available",
+    "noProductsFound": "No products found",
+    "checkBackSoon": "Check back soon for new arrivals.",
+    "featured": "Featured",
+    "new": "New Arrival",
+    "details": "View Details",
+    "noImageAvailable": "No Image Available",
+    "viewImage": "View",
+    "notFoundTitle": "Product not found",
+    "notFoundDescription": "The product you're looking for doesn't exist or has been removed.",
+    "backToProducts": "Back to products"
+  },
+  "productDetail": {
+    "quantity": "Quantity",
+    "addToCart": "Add to Cart",
+    "outOfStock": "Out of Stock",
+    "description": "Description",
+    "ingredients": "Ingredients",
+    "howToUse": "How to Use",
+    "youMayAlsoLike": "You May Also Like",
+    "detailsHeading": "Product Details",
+    "origin": "Origin",
+    "weight": "Weight",
+    "dimensions": "Dimensions",
+    "unitMm": "mm"
+  },
+  "cart": {
+    "title": "Your Cart",
+    "empty": "Your cart is empty",
+    "continueShopping": "Continue Shopping",
+    "subtotal": "Subtotal",
+    "checkout": "Proceed to Checkout",
+    "remove": "Remove",
+    "itemAdded": "Item added to cart",
+    "vatIncluded": "VAT/taxes included in price",
+    "shippingNote": "Shipping costs and delivery time will be calculated at checkout based on your delivery address.",
+    "inStock": "In Stock",
+    "lowStock": "Low Stock",
+    "insufficientStock": "Not enough stock available",
+    "onlyXLeft": "Only {count} left!",
+    "stockLimit": "Only {available} available in stock.",
+    "stockLimitWithCart": "Only {available} in stock. You already have {inCart} in your cart.",
+    "allInCart": "All {count} available are in your cart",
+    "madeToOrder": "Made to Order",
+    "preOrder": "Pre-order",
+    "soldOut": "Sold Out",
+    "days": "days",
+    "weeks": "weeks",
+    "estimatedDelivery": "Est. delivery",
+    "preOrderNote": "Your cart includes pre-order items",
+    "preOrderPaymentNote": "Pre-order items require card payment. Cash on Delivery is not available.",
+    "codNotAvailable": "Not available for pre-orders",
+    "dailyLimitExceeded": "Daily limit reached. You can buy {remaining} more today.",
+    "dailyLimitReached": "Limit of 10 reached."
+  },
+  "checkout": {
+    "title": "Checkout",
+    "shipping": "Shipping",
+    "payment": "Payment",
+    "orderSummary": "Order Summary",
+    "shippingAddress": "Shipping Address",
+    "billingAddress": "Billing Address",
+    "sameAsShipping": "Same as shipping address",
+    "savedAddresses": "Saved Addresses",
+    "useNewAddress": "Use a different address",
+    "saveAddress": "Save this address for future orders",
+    "continueToPayment": "Continue to Payment",
+    "addressName": "Address Name",
+    "invoiceEmail": "Invoice Email",
+    "invoiceEmailHint": "This email will be used for invoice and order updates",
+    "contactInfoImportant": "Please ensure your email and phone number are correct. Our courier will use these details to coordinate delivery and provide order updates.",
+    "confirmAddress": "CONFIRM ADDRESS",
+    "confirmingAddress": "CONFIRMING ADDRESS...",
+    "requiredField": "This field is required",
+    "pinYourLocation": "Pin your exact location",
+    "useMyLocation": "Use my location",
+    "locating": "Finding your location...",
+    "locationError": "Could not get your location",
+    "locationRequired": "Please search for your address or click on the map to set your location",
+    "searchAddress": "Search for an address",
+    "dragPinHint": "Drag the pin or tap the map to adjust",
+    "selectCountry": "Select country",
+    "calculatingShipping": "CALCULATING SHIPPING...",
+    "shippingCalculated": "SHIPPING CALCULATED",
+    "calculateShipping": "CALCULATE SHIPPING",
+    "saving": "Saving...",
+    "saveAddressButton": "Save Address",
+    "calculating": "Calculating...",
+    "enterAddressFirst": "Enter address first",
+    "estimatedDelivery": "Estimated Delivery",
+    "includesMadeToOrder": "Includes made-to-order items",
+    "proceedToPayment": "PROCEED TO PAYMENT",
+    "phoneRequired": "Phone number is required to proceed",
+    "maxAddressesHint": "Please delete or edit an existing address to add a new one.",
+    "manageAddresses": "Manage Addresses",
+    "selectCity": "Select a city",
+    "apartment": "Apartment, suite, etc. (optional)",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Address",
+    "city": "City",
+    "postalCode": "Postal Code",
+    "country": "Country",
+    "state": "State/Province",
+    "paymentMethod": "Payment Method",
+    "placeOrder": "Place Order",
+    "processing": "Processing...",
+    "orderConfirmed": "Order Confirmed!",
+    "notAvailable": "Not Available",
+    "thankYou": "Thank you for your order",
+    "earnPoints": "Earn {points} Zen Points",
+    "earnPointsGeneric": "Earn Zen Points",
+    "withThisOrder": "With this order",
+    "zenPointsAddedWithOrder": "Zen Points added with this order",
+    "vatTaxesIncluded": "VAT / Taxes included",
+    "secure": "Secure",
+    "protected": "Protected",
+    "sslSecure": "SSL Secure Checkout",
+    "securePayment": "Secure Payment",
+    "privacyProtected": "Privacy Protected",
+    "moneyBackGuarantee": "Money-Back Guarantee",
+    "poweredBy": "Powered by",
+    "acceptedCards": "Accepted Cards",
+    "licensedByBOA": "Licensed by Bank of Albania",
+    "shippingMethod": "Shipping Method",
+    "noShippingOptions": "No shipping options available for your address. Please check your address or contact support.",
+    "free": "Free",
+    "estimatedDeliveryShort": "Estimated Delivery",
+    "estimatedDeliveryNote": "1-3 business days within Albania",
+    "back": "Back",
+    "signInOrCreate": "Sign in / Create account",
+    "continueAsGuest": "Or continue as guest below",
+    "createAccountToEarn": "Create an account to earn points on this order and unlock discounts on future purchases.",
+    "stripeRedirect": "You'll be redirected to our secure payment page to complete your purchase.",
+    "securedBy": "Secured by",
+    "pokPay": "POK Pay",
+    "pokPayDescription": "Pay with card via POK",
+    "payWithPok": "PAY WITH POK",
+    "cardNumber": "Card Number",
+    "expiryDate": "Expiry Date",
+    "cvv": "CVV",
+    "cardholderName": "Cardholder Name",
+    "invalidCardNumber": "Invalid card number",
+    "invalidExpiry": "Invalid expiry date",
+    "invalidCvv": "Invalid CVV",
+    "invalidHolderName": "Cardholder name required",
+    "creatingOrder": "Creating order...",
+    "processingCard": "Processing card...",
+    "verifyingCard": "Verifying card...",
+    "awaitingVerification": "Complete verification...",
+    "confirmingPayment": "Confirming payment...",
+    "secureVerification": "Secure Verification",
+    "pokSecurityNotice": "Your card details are securely processed by POK Pay",
+    "preOrderItemStatus": "{available} in stock, {backorder} on order",
+    "securityNotice": "Your payment information is secure and encrypted",
+    "earnedPoints": "You earned {points} Zen Points!",
+    "codLabel": "Cash on Delivery",
+    "codExactAmount": "Please have the exact amount ready when your order arrives.",
+    "codExactAmountValue": "Please have €{amount} ready when your order arrives.",
+    "confirmationEmailNote": "We'll send you an email confirmation with your order details.",
+    "thankYouName": "Thank You, {name}!",
+    "zenPointsEarned": "Zen Points earned",
+    "tierDiscount": "tier discount",
+    "viewOrder": "View My Order",
+    "orderId": "Order",
+    "trackingNote": "You will receive an SMS with tracking information when your order ships.",
+    "saveAddressToAccount": "Save this address to my account",
+    "edit": "Edit",
+    "editingAddress": "Editing address",
+    "cancel": "Cancel",
+    "updateAddress": "Update Address",
+    "updateAddressFirst": "Update address first",
+    "savePhoneToAccount": "Save this phone number to my account",
+    "phoneWillOverwrite": "This will replace your current account phone number.",
+    "phoneVerificationRequired": "Phone verification required to proceed",
+    "phoneVerification": {
+      "invalidPhone": "Please enter a valid phone number",
+      "sending": "Sending...",
+      "sendCode": "Send Verification Code",
+      "codeSent": "Verification code sent to",
+      "changePhone": "Change phone number",
+      "enterCode": "Enter 6-digit code",
+      "verifying": "Verifying...",
+      "verify": "Verify",
+      "resendIn": "Resend in",
+      "resend": "Resend",
+      "verified": "Verified",
+      "phoneVerified": "Phone number verified",
+      "change": "Change",
+      "required": "Phone verification is required to proceed with checkout",
+      "invalidCode": "Please enter the verification code"
+    },
+    "selectLocationOnMap": "Please select your location on the map",
+    "shippingRestriction": "We currently ship to:",
+    "invoiceRestriction": "We currently invoice to:",
+    "paymentMethod": {
+      "title": "Choose Payment Method",
+      "subtitle": "Select how you want to pay",
+      "cancel": "Cancel",
+      "selectMethod": "SELECT A PAYMENT METHOD",
+      "digital": {
+        "title": "Pay Online",
+        "subtitle": "Visa, Mastercard via POK",
+        "available": "AVAILABLE",
+        "comingSoon": "COMING SOON",
+        "saveDiscount": "Save 2.5% on your order!",
+        "discountDesc": "Pay digitally and get instant discount",
+        "youSave": "You save",
+        "secure": "Secure 3DS",
+        "instant": "Instant payment",
+        "securedBy": "Secured by POK - Bank of Albania",
+        "confirmButton": "Continue with Card Payment"
+      },
+      "cod": {
+        "title": "Cash on Delivery",
+        "subtitle": "Pay when you receive",
+        "available": "AVAILABLE",
+        "noExtraFees": "No extra fees",
+        "exactAmount": "Please have exact amount ready",
+        "albaniaOnly": "Available in Albania only",
+        "notAvailable": "Not available for your location",
+        "kosovoNote": "Cash on Delivery is not available for Kosovo. Digital payment options coming soon.",
+        "selectButton": "Confirm Cash on Delivery"
+      },
+      "stripe": {
+        "title": "Credit / Debit Card",
+        "subtitle": "Secure payment via Stripe",
+        "redirect": "You'll be redirected to our secure payment page to complete your purchase.",
+        "securedBy": "Secured by"
+      }
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "imprint": "Imprint",
+    "shipping": "Shipping",
+    "returns": "Returns",
+    "withdrawal": "Right of Withdrawal",
+    "contact": "Contact Us",
+    "newsletter": "Subscribe to our newsletter",
+    "emailPlaceholder": "Enter your email",
+    "subscribe": "Subscribe"
+  },
+  "maintenance": {
+    "title": "We'll be back soon!",
+    "message": "We're currently performing maintenance to improve your experience.",
+    "checkBack": "Please check back later."
+  },
+  "auth": {
+    "login": "Log In",
+    "register": "Register",
+    "logout": "Log Out",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "phone": "Phone",
+    "optional": "optional",
+    "forgotPassword": "Forgot password?",
+    "loggingIn": "Logging in...",
+    "creatingAccount": "Creating account...",
+    "noAccount": "Don't have an account?",
+    "registerNow": "Register now",
+    "haveAccount": "Already have an account?",
+    "loginHere": "Log in here",
+    "welcomeBack": "Welcome Back",
+    "joinUs": "Join Us",
+    "createAccount": "Create Account",
+    "passwordHint": "At least 8 characters",
+    "passwordsNoMatch": "Passwords do not match",
+    "passwordTooShort": "Password must be at least 8 characters",
+    "signupBonus": "Get 50 Zen Points!",
+    "signupBonusDesc": "Create an account and start earning rewards",
+    "zenPointsTitle": "Earn Zen Points",
+    "zenPointsDesc": "Earn 10 points per €1 spent. Unlock discounts!",
+    "greeting": "Hi",
+    "zenPoints": "Zen Points",
+    "resetsIn": "Resets in {days} days",
+    "myOrders": "My Orders",
+    "accountSettings": "Account Settings",
+    "comingSoon": "Coming soon"
+  },
+  "account": {
+    "title": "My Account",
+    "welcome": "Welcome back",
+    "dashboard": "Dashboard",
+    "addresses": "Addresses",
+    "orders": "Orders",
+    "profile": "Profile",
+    "signOut": "Sign Out",
+    "zenPoints": "Zen Points",
+    "earnPoints": "Earn 10 points per €1 spent",
+    "tier": "Tier",
+    "currentDiscount": "Current discount",
+    "offAllProducts": "off all products",
+    "pointsToNextTier": "points to next tier",
+    "resetsIn": "Points reset in {days} days",
+    "current": "Current",
+    "maxTierReached": "You've reached the highest tier!",
+    "defaultAddress": "Default Address",
+    "manage": "Manage",
+    "noAddressSaved": "No addresses saved yet",
+    "moreAddresses": "more addresses",
+    "addAddress": "Add Address",
+    "addAddressHint": "Save your shipping address for faster checkout",
+    "recentOrders": "Recent Orders",
+    "viewAll": "View All",
+    "noOrdersYet": "No orders yet",
+    "moreOrders": "more orders",
+    "noOrdersHint": "Start shopping to see your orders here",
+    "startShopping": "Start Shopping",
+    "howItWorks": "How Zen Points Work",
+    "step1Title": "Shop",
+    "step1Desc": "Earn 10 points for every €1 spent",
+    "step2Title": "Level Up",
+    "step2Desc": "Reach new tiers for bigger discounts",
+    "step3Title": "Save",
+    "step3Desc": "Enjoy up to 15% off all products",
+    "pointsRequired": "Points Required",
+    "discount": "Discount",
+    "newAddress": "New Address",
+    "editAddress": "Edit Address",
+    "addressLabel": "Label",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "address": "Street Address",
+    "apartment": "Apartment, suite, etc.",
+    "city": "City",
+    "selectCity": "Select a city",
+    "country": "Country",
+    "postalCode": "Postal Code",
+    "phone": "Phone Number",
+    "setAsDefault": "Set as default address",
+    "saveAddress": "Save Address",
+    "saving": "Saving...",
+    "cancel": "Cancel",
+    "default": "Default",
+    "makeDefault": "Make Default",
+    "deleteAddress": "Delete Address",
+    "delete": "Delete",
+    "confirmDelete": "Are you sure you want to delete this address? This action cannot be undone.",
+    "order": "Order",
+    "items": "items",
+    "item": "item",
+    "each": "each",
+    "qty": "Qty",
+    "orderItems": "Order Items",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "discount": "Discount",
+    "total": "Total",
+    "backToOrders": "Back to Orders",
+    "placedOn": "Placed on",
+    "estimatedDelivery": "Estimated Delivery",
+    "shippingAddress": "Shipping Address",
+    "noAddress": "No address available",
+    "paymentMethod": "Payment Method",
+    "cashOnDelivery": "Cash on Delivery",
+    "codAmount": "Amount due",
+    "cardPayment": "Card Payment",
+    "paymentProcessed": "Payment successfully processed",
+    "invoice": "Invoice",
+    "downloadInvoice": "Download your order invoice",
+    "vatIncluded": "VAT/taxes included",
+    "generating": "Generating...",
+    "orderStatuses": {
+      "pending": "Pending",
+      "processing": "Processing",
+      "shipped": "Shipped",
+      "delivered": "Delivered",
+      "cancelled": "Cancelled"
+    },
+    "needHelp": "Need Help?",
+    "orderHelpText": "If you have questions about your order, please contact our support team.",
+    "memberSince": "Member since",
+    "profileUpdated": "Profile updated successfully",
+    "email": "Email",
+    "emailManaged": "Email is managed through your login provider",
+    "save": "Save",
+    "saveChanges": "Save Changes",
+    "edit": "Edit",
+    "emailVerificationRequired": "Email change requires verification",
+    "emailVerificationNote": "A verification code will be sent to confirm your new email",
+    "accountSecurity": "Account Security",
+    "securityManaged": "Your account security is managed through your login provider (Google, Apple, or Email).",
+    "connectedWith": "Connected Account",
+    "dangerZone": "Danger Zone",
+    "deleteAccount": "Delete Account",
+    "deleteAccountDesc": "Permanently delete your account and all associated data",
+    "deleteAccountWarning": "This action cannot be undone",
+    "whyLeaving": "Why are you leaving?",
+    "selectReason": "Please select a reason",
+    "continue": "Continue",
+    "back": "Back",
+    "typeDeleteToConfirm": "Type DELETE to confirm",
+    "deleteConfirmationWarning": "This will permanently delete your account. You will lose:",
+    "deleteWarning1": "All your Zen Points and tier progress",
+    "deleteWarning2": "Your saved addresses and preferences",
+    "deleteWarning3": "Access to your order history",
+    "deleteAccountPermanently": "Delete Account",
+    "addressName": "Address Name",
+    "maxAddressesReached": "Maximum 4 addresses",
+    "editProfile": "Edit Profile",
+    "changeEmail": "Change",
+    "verificationCode": "Enter 6-digit code",
+    "verifyEmail": "Verify Email",
+    "sendCode": "Send Code",
+    "codeSent": "Verification code sent to",
+    "emailChanged": "Email updated successfully",
+    "enterNewEmail": "Enter new email address",
+    "enterValidEmail": "Please enter a valid email address",
+    "enterValidCode": "Please enter a valid verification code",
+    "pinYourLocation": "Pin your exact location",
+    "useMyLocation": "Use my location",
+    "locating": "Finding your location...",
+    "locationError": "Could not get your location",
+    "searchAddress": "Search for an address",
+    "dragPinHint": "Drag the pin or tap the map to adjust",
+    "selectCountry": "Select country",
+    "selectLocationOnMap": "Please select your location on the map",
+    "shippingRestriction": "We currently ship to:",
+    "invoiceRestriction": "We currently invoice to:",
+    "language": "Language",
+    "selectLanguage": "Select Language",
+    "settings": "Settings",
+    "notifications": "Notifications",
+    "support": "Support",
+    "signInPrompt": "Sign in to manage your account, view orders, and more",
+    "signOutConfirm": "Are you sure you want to sign out?",
+    "tapToEdit": "Tap to edit profile"
+  },
+  "game": {
+    "title": "Zen Memory",
+    "subtitle": "Match all pairs within 60 seconds to earn Zen Points",
+    "dailyChallenge": "Daily Challenge",
+    "signInToPlay": "Sign in to Play",
+    "signInDescription": "Create an account or sign in to play the daily memory game and earn Zen Points",
+    "signIn": "SIGN IN",
+    "readyToPlay": "Ready to Play?",
+    "matchPairs": "Match all 9 pairs to win",
+    "timeLimit": "You have 60 seconds to complete the puzzle",
+    "winReward": "Win +10 Zen Points",
+    "startGame": "START GAME",
+    "loading": "Loading...",
+    "moves": "Moves",
+    "pairs": "Pairs",
+    "youWon": "You Won!",
+    "completedIn": "Completed in {time}s with {moves} moves",
+    "zenPoints": "Zen Points",
+    "timeUp": "Time's Up!",
+    "tryAgainTomorrow": "Don't worry, you can try again tomorrow",
+    "ok": "OK",
+    "comeBackLater": "Come Back Later",
+    "nextGameIn": "Next game available in",
+    "playNow": "Play Now",
+    "totalWins": "Total Wins",
+    "winMessage": "Your mind is sharp! Matcha keeps your brain well nourished.",
+    "loseMessage": "Perhaps a cup of matcha from Baucis Zen would help you focus better next time.",
+    "shopProducts": "EXPLORE PRODUCTS"
+  },
+  "cookies": {
+    "title": "We value your privacy",
+    "description": "We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking \"Accept All\", you consent to our use of cookies.",
+    "learnMore": "Learn more",
+    "acceptAll": "Accept All",
+    "essentialOnly": "Essential Only",
+    "customize": "Customize",
+    "settings": {
+      "title": "Cookie Settings",
+      "required": "Required",
+      "save": "Save Preferences",
+      "essential": {
+        "title": "Essential Cookies",
+        "desc": "These cookies are necessary for the website to function and cannot be switched off. They include session cookies, authentication, and security cookies."
+      },
+      "analytics": {
+        "title": "Analytics Cookies",
+        "desc": "Help us understand how visitors interact with our website by collecting and reporting information anonymously."
+      },
+      "marketing": {
+        "title": "Marketing Cookies",
+        "desc": "Used to track visitors across websites to display relevant advertisements based on your browsing habits."
+      }
+    }
+  },
+  "legal": {
+    "title": "Legal Information",
+    "subtitle": "Important policies and terms for your protection",
+    "backToStore": "Back to Store",
+    "lastUpdated": "Last Updated",
+    "nav": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms & Conditions",
+      "imprint": "Imprint",
+      "withdrawal": "Right of Withdrawal",
+      "shipping": "Shipping Policy",
+      "returns": "Returns Policy"
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "metaDescription": "Learn how Baucis Zen collects, uses, and protects your personal data in accordance with GDPR.",
+      "intro": "At Baucis Zen, we take your privacy seriously. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and make purchases. Please read this policy carefully.",
+      "controller": {
+        "title": "Data Controller",
+        "note": "Contact details are provided in our Imprint page."
+      },
+      "collect": {
+        "title": "Information We Collect",
+        "account": {
+          "title": "Account Information",
+          "item1": "Name and email address",
+          "item2": "Phone number (optional)",
+          "item3": "Password (encrypted)",
+          "item4": "Account preferences and settings"
+        },
+        "order": {
+          "title": "Order Information",
+          "item1": "Shipping and billing addresses",
+          "item2": "Order history and transaction details",
+          "item3": "Payment information (processed securely by our payment providers)"
+        },
+        "technical": {
+          "title": "Technical Information",
+          "item1": "IP address and browser type",
+          "item2": "Device information and operating system",
+          "item3": "Cookies and similar tracking technologies"
+        }
+      },
+      "use": {
+        "title": "How We Use Your Information",
+        "item1": "To process and fulfill your orders",
+        "item2": "To communicate with you about your orders and account",
+        "item3": "To provide customer support",
+        "item4": "To improve our website and services",
+        "item5": "To send marketing communications (with your consent)"
+      },
+      "thirdParties": {
+        "title": "Third-Party Services",
+        "intro": "We work with trusted partners to provide our services:",
+        "clerk": {
+          "name": "Clerk",
+          "purpose": "Authentication and user management"
+        },
+        "cloudflare": {
+          "name": "Cloudflare",
+          "purpose": "Security, CDN, and performance optimization"
+        },
+        "vercel": {
+          "name": "Vercel",
+          "purpose": "Website hosting and analytics"
+        },
+        "railway": {
+          "name": "Railway",
+          "purpose": "Backend infrastructure and database"
+        },
+        "pok": {
+          "name": "POK",
+          "purpose": "Payment processing (Visa, Mastercard)"
+        },
+        "ultra": {
+          "name": "Ultra C.E.P SHPK",
+          "purpose": "Logistics and delivery partner (receives recipient name, address, and phone number for delivery)"
+        }
+      },
+      "cookies": {
+        "title": "Cookies",
+        "intro": "We use cookies to enhance your experience:",
+        "essential": {
+          "badge": "Essential",
+          "title": "Essential Cookies",
+          "desc": "Required for site functionality, authentication, and security."
+        },
+        "analytics": {
+          "badge": "Optional",
+          "title": "Analytics Cookies",
+          "desc": "Help us understand how you use our site to improve it."
+        }
+      },
+      "rights": {
+        "title": "Your Rights (GDPR)",
+        "intro": "Under the General Data Protection Regulation, you have the following rights:",
+        "access": {
+          "title": "Right of Access",
+          "desc": "Request a copy of your personal data."
+        },
+        "rectification": {
+          "title": "Right to Rectification",
+          "desc": "Request correction of inaccurate data."
+        },
+        "erasure": {
+          "title": "Right to Erasure",
+          "desc": "Request deletion of your personal data."
+        },
+        "portability": {
+          "title": "Right to Data Portability",
+          "desc": "Receive your data in a structured, machine-readable format."
+        },
+        "object": {
+          "title": "Right to Object",
+          "desc": "Object to processing of your personal data for marketing."
+        }
+      },
+      "retention": {
+        "title": "Data Retention",
+        "desc": "We retain your personal data only for as long as necessary to fulfill the purposes for which it was collected, including legal, accounting, or reporting requirements. Order data is typically retained for 7 years for tax purposes."
+      },
+      "contact": {
+        "title": "Contact Us",
+        "desc": "If you have questions about this Privacy Policy or wish to exercise your rights, please contact us:"
+      }
+    },
+    "terms": {
+      "title": "Terms & Conditions",
+      "metaDescription": "Read the terms and conditions for using Baucis Zen's website and purchasing our products.",
+      "intro": "These Terms and Conditions govern your use of our website and the purchase of products from Baucis Zen. By using our website or placing an order, you agree to these terms.",
+      "definitions": {
+        "title": "Definitions",
+        "we": "We/Us/Our",
+        "weDesc": "Baucis Zen, the operator of this website",
+        "you": "You/Customer",
+        "youDesc": "The person using our website or making a purchase",
+        "products": "Products",
+        "productsDesc": "Goods available for purchase on our website",
+        "order": "Order",
+        "orderDesc": "Your request to purchase products from us"
+      },
+      "orders": {
+        "title": "Orders and Contracts",
+        "para1": "All orders placed through our website are subject to acceptance. A contract is formed when we send you an order confirmation email.",
+        "para2": "We reserve the right to refuse or cancel any order for reasons including product availability, pricing errors, or suspected fraud.",
+        "para3": "You are responsible for ensuring the accuracy of your order details, including shipping address and contact information."
+      },
+      "prices": {
+        "title": "Prices and Payment",
+        "item1": "All prices are displayed in Euros (€) and include applicable VAT.",
+        "item2": "Prices are subject to change without notice, but changes will not affect confirmed orders.",
+        "item3": "Payment must be made at the time of order unless Cash on Delivery is selected."
+      },
+      "payment": {
+        "title": "Payment Methods",
+        "intro": "We accept the following payment methods:",
+        "item1": "Credit/Debit cards (Visa, Mastercard, American Express)",
+        "item2": "Cash on Delivery (available in selected areas)"
+      },
+      "delivery": {
+        "title": "Delivery",
+        "desc": "Please refer to our Shipping Policy for detailed information about delivery times, costs, and procedures. Delivery is provided by Ultra C.E.P SHPK under Albanian postal law."
+      },
+      "shippingLiability": {
+        "title": "Shipping Liability",
+        "desc": "Our shipping partner's liability is limited to: 2,000 ALL for registered letters, 5,000 ALL for parcels, and 500 ALL per day for delays (maximum 5,000 ALL). Optional insurance is available at 1% of declared value (minimum €5)."
+      },
+      "ip": {
+        "title": "Intellectual Property",
+        "desc": "All content on this website, including text, images, logos, and designs, is the property of Baucis Zen and is protected by copyright and trademark laws. You may not reproduce, distribute, or use any content without our written permission."
+      },
+      "liability": {
+        "title": "Limitation of Liability",
+        "desc": "To the fullest extent permitted by law, Baucis Zen shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of our website or products. Our total liability shall not exceed the amount you paid for the products.",
+        "shippingTitle": "Shipping Partner Liability Limits",
+        "registeredLetters": "Registered letters: Up to 2,000 ALL indemnity",
+        "parcels": "Parcels: Up to 5,000 ALL indemnity"
+      },
+      "law": {
+        "title": "Governing Law",
+        "desc": "These Terms and Conditions are governed by the laws of the European Union and, specifically, the laws of the country where Baucis Zen is registered. Any disputes shall be resolved in the competent courts of that jurisdiction."
+      },
+      "changes": {
+        "title": "Changes to Terms",
+        "desc": "We may update these Terms and Conditions from time to time. Changes will be posted on this page with an updated revision date. Continued use of our website after changes constitutes acceptance of the new terms."
+      },
+      "contact": {
+        "title": "Contact",
+        "desc": "For questions about these Terms and Conditions, please contact us:"
+      }
+    },
+    "imprint": {
+      "title": "Imprint (Legal Notice)",
+      "metaDescription": "Legal information about Baucis Zen including company details, registration, and contact information.",
+      "company": {
+        "title": "Company Information",
+        "address": "Address"
+      },
+      "contact": {
+        "title": "Contact",
+        "email": "Email",
+        "phone": "Phone"
+      },
+      "representatives": {
+        "title": "Legal Representatives",
+        "managing": "Managing Director"
+      },
+      "registration": {
+        "title": "Commercial Registration",
+        "court": "Registration Court",
+        "number": "Registration Number"
+      },
+      "vat": {
+        "title": "VAT Information",
+        "number": "VAT ID Number"
+      },
+      "dispute": {
+        "title": "Online Dispute Resolution",
+        "para1": "The European Commission provides a platform for online dispute resolution (ODR), which you can find at:",
+        "para2": "We are not obligated and currently not willing to participate in dispute resolution proceedings before a consumer arbitration board."
+      },
+      "note": {
+        "title": "Note",
+        "desc": "Please replace the placeholder values [in brackets] with your actual company information before publishing."
+      }
+    },
+    "withdrawal": {
+      "title": "Right of Withdrawal",
+      "metaDescription": "Information about your 14-day right to withdraw from purchases at Baucis Zen under EU consumer law.",
+      "right": {
+        "title": "Your Right to Withdraw",
+        "desc": "As a consumer in the European Union, you have the right to withdraw from a distance contract within 14 days without giving any reason."
+      },
+      "period": {
+        "title": "Withdrawal Period",
+        "days": "14 Days",
+        "desc": "The withdrawal period expires 14 days from the day on which you or a third party designated by you (other than the carrier) physically acquires the goods."
+      },
+      "how": {
+        "title": "How to Exercise Your Right",
+        "para1": "To exercise your right of withdrawal, you must inform us of your decision to withdraw from the contract by a clear statement (e.g., a letter sent by post or email).",
+        "para2": "You may use the model withdrawal form below, but it is not obligatory. To meet the withdrawal deadline, it is sufficient to send your communication before the withdrawal period expires."
+      },
+      "effects": {
+        "title": "Effects of Withdrawal",
+        "item1": "We will reimburse all payments received from you, including delivery costs (except additional costs if you chose a type of delivery other than the least expensive standard delivery offered by us).",
+        "item2": "Reimbursement will be made without undue delay and no later than 14 days from the day we receive notice of your withdrawal.",
+        "item3": "We will use the same means of payment you used for the initial transaction, unless you have expressly agreed otherwise.",
+        "item4": "We may withhold reimbursement until we have received the goods back or you have supplied evidence of having sent back the goods."
+      },
+      "exclusions": {
+        "title": "Exclusions from Right of Withdrawal",
+        "intro": "The right of withdrawal does not apply to:",
+        "item1": "Sealed goods which are not suitable for return due to health protection or hygiene reasons, if unsealed after delivery",
+        "item2": "Goods which are, after delivery, inseparably mixed with other items",
+        "item3": "Goods made to your specifications or clearly personalized"
+      },
+      "form": {
+        "title": "Model Withdrawal Form",
+        "intro": "Complete and return this form only if you wish to withdraw from the contract:",
+        "to": "To",
+        "body1": "I/We hereby give notice that I/We withdraw from my/our contract of sale of the following goods:",
+        "ordered": "Ordered on",
+        "received": "Received on",
+        "name": "Name of consumer(s)",
+        "address": "Address of consumer(s)",
+        "date": "Date",
+        "signature": "Signature (only if on paper)"
+      },
+      "contact": {
+        "title": "Contact for Withdrawal",
+        "desc": "Send your withdrawal notice to:"
+      }
+    },
+    "shipping": {
+      "title": "Shipping Policy",
+      "metaDescription": "Learn about shipping options, delivery times, and costs for Baucis Zen orders across Albania and Kosovo.",
+      "intro": "We are committed to delivering your wellness products safely and efficiently. We partner with Ultra C.E.P SHPK for reliable delivery across Albania and Kosovo.",
+      "partner": {
+        "title": "Shipping Partner",
+        "name": "Ultra C.E.P SHPK",
+        "desc": "Licensed postal and courier service operating under Albanian law (Law No. 46/2015)"
+      },
+      "areas": {
+        "title": "Delivery Areas",
+        "tirana": {
+          "title": "Tirana",
+          "desc": "Capital city with fastest delivery"
+        },
+        "albania": {
+          "title": "Albania (National)",
+          "desc": "All cities and rural areas across Albania"
+        },
+        "kosovo": {
+          "title": "Kosovo",
+          "desc": "International delivery to Kosovo"
+        }
+      },
+      "times": {
+        "title": "Delivery Times & Costs",
+        "destination": "Destination",
+        "deliveryTime": "Delivery Time",
+        "cost": "Cost",
+        "tirana": "Tirana",
+        "tiranaTime": "24 hours",
+        "tiranaCost": "250 ALL",
+        "albaniaCity": "Albania (Cities)",
+        "albaniaCityTime": "24 hours",
+        "albaniaRural": "Albania (Rural)",
+        "albaniaRuralTime": "24-72 hours",
+        "albaniaCost": "360 ALL",
+        "kosovo": "Kosovo",
+        "kosovoTime": "4 days",
+        "kosovoCost": "€7.00",
+        "note": "* Delivery times are estimates and may vary due to holidays or unforeseen circumstances. Prices in ALL are converted to EUR at checkout using current exchange rates."
+      },
+      "weight": {
+        "title": "Weight & Surcharges",
+        "baseWeight": "Standard rate includes packages up to 2 kg",
+        "surcharge": "Additional weight: +50 ALL per kg over 2 kg",
+        "example": "Example: A 5 kg package to Tirana = 250 ALL + (3 × 50 ALL) = 400 ALL"
+      },
+      "processing": {
+        "title": "Order Processing",
+        "item1": "Orders are processed Monday to Friday, 9:00 - 17:00 CET",
+        "item2": "Orders placed before 14:00 CET are typically shipped the same day",
+        "item3": "Orders placed on weekends or holidays are processed the next business day"
+      },
+      "tracking": {
+        "title": "Order Tracking",
+        "desc": "Once your order is shipped, you will receive an SMS with a real-time tracking link. The tracking includes all shipment information, payment method, and delivery status updates."
+      },
+      "liability": {
+        "title": "Shipping Liability",
+        "intro": "Our shipping partner provides the following coverage:",
+        "letters": "Registered letters: Up to 2,000 ALL indemnity",
+        "parcels": "Parcels: Up to 5,000 ALL indemnity",
+        "delays": "Delivery delays: 500 ALL per day (maximum 5,000 ALL)",
+        "insurance": "Optional insurance available: 1% of declared value (minimum €5)"
+      },
+      "issues": {
+        "title": "Shipping Issues",
+        "desc": "If you experience any issues with your delivery, please contact us immediately:"
+      }
+    },
+    "returns": {
+      "title": "Returns Policy",
+      "metaDescription": "Information about returning products to Baucis Zen, refund process, and conditions.",
+      "intro": "Your satisfaction is important to us. If you're not completely happy with your purchase, we're here to help.",
+      "policy": {
+        "title": "Return Policy",
+        "desc": "You may return most items within 14 days of delivery for a full refund. Items must be unused, in their original packaging, and in resalable condition.",
+        "withdrawal": "For more details about your legal rights, please see our",
+        "withdrawalLink": "Right of Withdrawal page"
+      },
+      "conditions": {
+        "title": "Return Conditions",
+        "intro": "To be eligible for a return:",
+        "item1": "Items must be unused and in their original condition",
+        "item2": "Items must be in original, undamaged packaging",
+        "item3": "Items must be returned within 14 days of receiving your order",
+        "item4": "Proof of purchase (order confirmation email) is required"
+      },
+      "nonReturnable": {
+        "title": "Non-Returnable Items",
+        "item1": "Opened food products (matcha, teas) for hygiene reasons",
+        "item2": "Personalized or custom-made items",
+        "item3": "Items marked as final sale"
+      },
+      "shippingCosts": {
+        "title": "Return Shipping Costs",
+        "customerPays": "Return shipping costs are paid by the customer.",
+        "refused": "If a package is refused by the recipient, the sender is responsible for return shipping costs."
+      },
+      "process": {
+        "title": "Return Process",
+        "step1": {
+          "title": "Contact Us",
+          "desc": "Email us at returns@baucis-zen.com with your order number and reason for return"
+        },
+        "step2": {
+          "title": "Receive Approval",
+          "desc": "We'll review your request and provide return instructions within 1-2 business days"
+        },
+        "step3": {
+          "title": "Ship Your Return",
+          "desc": "Pack items securely and ship to the address provided at your expense. Keep your tracking number"
+        },
+        "step4": {
+          "title": "Receive Refund",
+          "desc": "Once we receive and inspect your return, we'll process your refund"
+        }
+      },
+      "refunds": {
+        "title": "Refunds",
+        "para1": "Once your return is received and inspected, we will send you an email to notify you of the approval or rejection of your refund.",
+        "para2": "If approved, your refund will be processed and automatically applied to your original payment method.",
+        "method": "Refund Method",
+        "methodDesc": "Original payment method",
+        "timeline": "Processing Time",
+        "timelineDesc": "5-10 business days"
+      },
+      "damaged": {
+        "title": "Damaged or Defective Items",
+        "desc": "If you receive a damaged or defective item, please contact us immediately with:",
+        "item1": "Photos of the damaged item and packaging",
+        "item2": "Your order number",
+        "item3": "Description of the issue"
+      },
+      "contact": {
+        "title": "Contact Us",
+        "desc": "For any questions about returns, please contact us:"
+      }
+    }
+  },
+  "chat": {
+    "zenGreeting": "Find your zen",
+    "zenSubtext": "I'm here to help",
+    "openChat": "Open zen support",
+    "placeholder": "Type your message...",
+    "send": "Send",
+    "close": "Close",
+    "signInRequired": "Sign in to unlock personalized zen support and track your wellness journey with us.",
+    "signIn": "Begin Journey",
+    "signInBonus": "Get 50 Zen Points when you join!",
+    "greeting": "Namaste, {name}! How may I guide your zen journey today?",
+    "friend": "friend",
+    "typing": "composing wisdom",
+    "error": "The path encountered an obstacle. Please try again.",
+    "rateLimit": "Take a mindful breath... then try again.",
+    "zenMoment": "A moment of zen...",
+    "contemplatingQuestion": "Contemplating your question...",
+    "proverbs": [
+      "The journey of a thousand miles begins with a single step.",
+      "Be still like a mountain and flow like a river.",
+      "In the midst of movement, find stillness.",
+      "The obstacle is the path.",
+      "When you realize nothing is lacking, the whole world belongs to you.",
+      "Breathe in calm, breathe out tension.",
+      "Nature does not hurry, yet everything is accomplished.",
+      "The quieter you become, the more you can hear.",
+      "Peace comes from within. Do not seek it without.",
+      "Let go of what was. Trust what will be.",
+      "The present moment is the only moment available to us.",
+      "Simplicity is the ultimate sophistication.",
+      "Where there is peace and meditation, there is neither anxiety nor doubt.",
+      "The mind is everything. What you think, you become.",
+      "To a mind that is still, the whole universe surrenders."
+    ]
+  }
+}
+

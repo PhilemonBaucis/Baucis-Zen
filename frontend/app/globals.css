@@ -1,0 +1,611 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@300;400;500;600;700&family=Caveat:wght@400;500;600;700&family=Dancing+Script:wght@400;500;600;700&family=Kalam:wght@300;400;700&family=Permanent+Marker&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Modern, luxury-inspired custom styles */
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply text-baucis-green-800 bg-gradient-to-br from-baucis-pink-50 via-white to-baucis-pink-100 antialiased;
+    background-attachment: fixed;
+  }
+  
+  * {
+    @apply border-gray-200;
+  }
+}
+
+@layer components {
+  /* Modern gradient buttons with matcha theme */
+  .btn-primary {
+    @apply relative overflow-hidden bg-gradient-to-r from-baucis-green-600 via-baucis-green-700 to-baucis-green-800 text-baucis-pink-50 px-8 py-4 rounded-full font-medium tracking-wide transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-baucis-green-500/25;
+  }
+  
+  .btn-primary::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-baucis-green-500 via-baucis-green-600 to-baucis-green-700 opacity-0 transition-opacity duration-500;
+  }
+  
+  .btn-primary:hover::before {
+    @apply opacity-100;
+  }
+  
+  .btn-primary span {
+    @apply relative z-10;
+  }
+  
+  .btn-secondary {
+    @apply relative overflow-hidden bg-baucis-pink-50 text-baucis-green-800 border-2 border-baucis-green-200 px-8 py-4 rounded-full font-medium tracking-wide transition-all duration-500 hover:scale-105 hover:shadow-xl hover:border-baucis-green-300;
+  }
+  
+  .btn-secondary::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-baucis-pink-100 to-baucis-pink-200 opacity-0 transition-opacity duration-500;
+  }
+  
+  .btn-secondary:hover::before {
+    @apply opacity-100;
+  }
+  
+  .btn-secondary span {
+    @apply relative z-10;
+  }
+  
+  /* Luxury product cards with glass morphism - Transparent */
+  .product-card {
+    @apply relative bg-transparent backdrop-blur-sm border border-baucis-green-200/20 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-700 hover:scale-105;
+  }
+  
+  .product-card::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-br from-baucis-green-100/20 to-transparent opacity-0 transition-opacity duration-500;
+  }
+  
+  .product-card:hover::before {
+    @apply opacity-100;
+  }
+  
+  /* Modern typography with luxury feel */
+  .heading-primary {
+    @apply text-5xl md:text-6xl lg:text-7xl font-light tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-baucis-green-800 via-baucis-green-700 to-baucis-green-800;
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .heading-secondary {
+    @apply text-3xl md:text-4xl lg:text-5xl font-light tracking-wide text-baucis-green-800;
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .heading-tertiary {
+    @apply text-xl font-medium tracking-wide text-baucis-green-700;
+  }
+  
+  /* Elegant navigation */
+  .nav-link {
+    @apply text-baucis-green-600 hover:text-baucis-green-800 px-4 py-2 text-sm font-medium transition-all duration-300 hover:scale-105;
+  }
+  
+  .nav-link-active {
+    @apply text-baucis-green-800 font-medium;
+  }
+  
+  /* Stunning hero section with baucis gradient */
+  .seasonal-section {
+    @apply relative overflow-hidden;
+    background: linear-gradient(135deg, #7ca163 0%, #6a8a55 50%, #5a7448 100%);
+  }
+  
+  .seasonal-section::before {
+    content: '';
+    @apply absolute inset-0 opacity-20;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    animation: float 20s ease-in-out infinite;
+  }
+  
+  /* Modern product grid with staggered animation */
+  .product-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8;
+  }
+  
+  .product-grid > * {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  
+  .product-grid > *:nth-child(1) { animation-delay: 0.1s; }
+  .product-grid > *:nth-child(2) { animation-delay: 0.2s; }
+  .product-grid > *:nth-child(3) { animation-delay: 0.3s; }
+  .product-grid > *:nth-child(4) { animation-delay: 0.4s; }
+  .product-grid > *:nth-child(5) { animation-delay: 0.5s; }
+  .product-grid > *:nth-child(6) { animation-delay: 0.6s; }
+  
+  /* Luxury pricing display */
+  .price-display {
+    @apply text-2xl font-bold text-gray-900;
+  }
+  
+  .price-compare {
+    @apply text-lg text-gray-400 line-through;
+  }
+  
+  /* Glass morphism effect - More transparent */
+  .glass {
+    @apply bg-transparent backdrop-blur-sm border border-white/10;
+  }
+  
+  /* Floating animation */
+  .float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  /* Pulse animation for CTAs */
+  .pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  /* Animation classes */
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  
+  .animate-scale-in {
+    animation: scaleIn 0.6s ease-out forwards;
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  
+  .animate-slide-in-left {
+    animation: slideInLeft 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  
+  .animate-slide-in-right {
+    animation: slideInRight 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  /* BAUCIS ZEN-themed components - Transparent */
+  .baucis-card {
+    @apply relative bg-transparent backdrop-blur-sm border border-baucis-green-200/30 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-700 hover:scale-105;
+  }
+
+  .baucis-card::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-br from-baucis-green-100/20 to-transparent opacity-0 transition-opacity duration-500;
+  }
+
+  .baucis-card:hover::before {
+    @apply opacity-100;
+  }
+
+  .baucis-glow {
+    @apply shadow-lg shadow-baucis-green-500/25;
+  }
+
+  .baucis-sparkle {
+    @apply animate-pulse;
+  }
+
+  .baucis-text {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-baucis-green-600 to-baucis-green-800;
+  }
+
+  .baucis-bg {
+    @apply bg-gradient-to-br from-baucis-pink-50 via-baucis-pink-100 to-baucis-pink-200;
+  }
+
+  .baucis-border {
+    @apply border-2 border-baucis-green-300/50 hover:border-baucis-green-500/70 transition-colors duration-300;
+  }
+
+  .baucis-button {
+    @apply relative overflow-hidden bg-gradient-to-r from-baucis-green-500 to-baucis-green-600 text-baucis-pink-50 px-6 py-3 rounded-full font-medium tracking-wide transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-baucis-green-500/30;
+  }
+
+  .baucis-button::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-baucis-green-400 to-baucis-green-500 opacity-0 transition-opacity duration-300;
+  }
+
+  .baucis-button:hover::before {
+    @apply opacity-100;
+  }
+
+  .baucis-button span {
+    @apply relative z-10;
+  }
+
+  /* BAUCIS ZEN Typography - Elegant Thin Serifed Style */
+  .baucis-zen-hero {
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    line-height: 1.2;
+  }
+
+  .baucis-zen-title {
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-size: 1.05em;
+    line-height: 1.3;
+  }
+
+  .baucis-zen-subtitle {
+    font-family: 'Crimson Text', serif;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    line-height: 1.4;
+    font-style: italic;
+  }
+
+  .baucis-zen-body {
+    font-family: 'Crimson Text', serif;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    line-height: 1.6;
+    font-size: 1.05em;
+  }
+
+  .baucis-zen-button {
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-size: 0.85em;
+  }
+
+  .baucis-zen-nav {
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 0.9em;
+  }
+
+  /* Handwritten/Artistic Text Styles - Refined & Elegant */
+  .handwritten-hero {
+    font-family: 'Caveat', cursive;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    transform: rotate(-0.5deg);
+    font-size: 1.05em;
+  }
+
+  .handwritten-hero:nth-child(2) {
+    transform: rotate(0.3deg);
+    font-weight: 300;
+  }
+
+  .handwritten-hero:nth-child(3) {
+    transform: rotate(-0.3deg);
+    font-weight: 500;
+  }
+
+  .handwritten-title {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    text-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.2);
+    font-size: 1.08em;
+  }
+
+  .handwritten-subtitle {
+    font-family: 'Caveat', cursive;
+    font-weight: 300;
+    letter-spacing: 0.03em;
+    font-size: 1.02em;
+  }
+
+  .handwritten-button {
+    font-family: 'Kalam', cursive;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 0.9em;
+  }
+
+  .handwritten-product {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    font-size: 1.05em;
+  }
+
+  .handwritten-price {
+    font-family: 'Caveat', cursive;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    font-size: 1.05em;
+  }
+
+  .handwritten-section {
+    font-family: 'Caveat', cursive;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    font-size: 1.05em;
+  }
+
+  /* Enhanced Artistic text effects - Transparent */
+  .artistic-text {
+    position: relative;
+    display: inline-block;
+    filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.2));
+  }
+
+  .sketchy-border {
+    border: 1px solid;
+    border-image: linear-gradient(45deg, #000, #666, #000) 1;
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .sketchy-border::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    border: 1px dashed rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    pointer-events: none;
+    opacity: 0.6;
+  }
+
+  .sketchy-border::after {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border: 1px dotted rgba(0, 0, 0, 0.1);
+    border-radius: 14px;
+    pointer-events: none;
+    opacity: 0.4;
+  }
+
+  /* Additional artistic effects */
+  .handwritten-glow {
+    text-shadow: 
+      0 0 5px rgba(0, 0, 0, 0.3),
+      0 0 10px rgba(0, 0, 0, 0.2),
+      0 0 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .handwritten-underline {
+    position: relative;
+  }
+
+  .handwritten-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, currentColor, transparent);
+    opacity: 0.6;
+    transform: skew(-2deg);
+  }
+
+  .handwritten-highlight {
+    /* Transparent highlight - no background */
+  }
+}
+
+/* Keyframe animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-20deg); }
+  75% { transform: rotate(10deg); }
+}
+
+@keyframes mascotFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+
+/* Custom utility classes */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Loading animations */
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
+/* Shimmer effect for loading states */
+.shimmer {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200px 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f8f9fa;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #667eea, #764ba2);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #5a6fd8, #6a4190);
+}
+
+/* Selection styling */
+::selection {
+  background: #667eea;
+  color: white;
+}
+
+::-moz-selection {
+  background: #667eea;
+  color: white;
+}
+
+/* Focus styles */
+.focus-ring {
+  @apply focus:outline-none focus:ring-4 focus:ring-blue-500/20 focus:ring-offset-2;
+}
+
+/* Gradient text utilities */
+.gradient-text {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600;
+}
+
+.gradient-text-warm {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-pink-500;
+}
+
+  /* Glass morphism utilities */
+  .glass-card {
+    @apply bg-transparent backdrop-blur-sm border border-baucis-green-200/10 rounded-2xl;
+  }
+
+  .glass-card-strong {
+    @apply bg-transparent backdrop-blur-md border border-baucis-green-200/20 rounded-2xl;
+  }
+
+/* Hover effects */
+.hover-lift {
+  @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-xl;
+}
+
+.hover-glow {
+  @apply transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25;
+}
+
+/* Responsive text utilities */
+.text-responsive {
+  @apply text-sm sm:text-base md:text-lg lg:text-xl;
+}
+
+/* Spacing utilities */
+.section-padding {
+  @apply py-16 md:py-20 lg:py-24;
+}
+
+.container-padding {
+  @apply px-4 sm:px-6 lg:px-8;
+}

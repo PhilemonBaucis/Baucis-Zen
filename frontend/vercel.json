@@ -1,0 +1,5 @@
+{
+  "name": "baucis-zen",
+  "framework": "nextjs",
+  "outputDirectory": ".next"
+}

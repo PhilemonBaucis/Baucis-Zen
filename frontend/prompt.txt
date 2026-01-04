@@ -1,0 +1,150 @@
+$ powershell -Command "Invoke-RestMethod -Uri 'http://localhost:8003/flowchart/current' | ConvertTo-Json -Depth 10"
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+CLOUD FUNCTION SET-UP
+1. gcloud auth login
+2. gcloud config set project gen-lang-client-0789213818
+3. gcloud secrets create TENANT_ID
+4. gcloud secrets versions add TENANT_ID --data-file=-
+5. gcloud iam service-accounts create ms-graph-function-sa --display-name="MS Graph Runtime SA" // Create Service Account
+6. gcloud iam service-accounts create custom-cloud-builder --display-name="Custom Cloud Build SA" // Create Built Service Account
+7. gcloud projects add-iam-policy-binding gen-lang-client-0789213818 --member="serviceAccount:ms-graph-function-sa@gen-lang-client-0789213818.iam.gserviceaccount.com" --role="roles/secretmanager.secretAccessor" //Allow the Runtime SA to Access Secrets:
+8. gcloud projects add-iam-policy-binding gen-lang-client-0789213818 --member="serviceAccount:custom-cloud-builder@gen-lang-client-0789213818.iam.gserviceaccount.com" --role="roles/cloudbuild.builds.builder" //Allow the Build SA to Build Functions
+9. gcloud functions deploy create-folder-http `
+  --gen2 `
+  --runtime python312 `
+  --region europe-west1 `
+  --source . `
+  --entry-point create_folder_http `
+  --trigger-http `
+  --allow-unauthenticated `
+  --build-service-account="projects/gen-lang-client-0789213818/serviceAccounts/custom-cloud-builder@gen-lang-client-0789213818.iam.gserviceaccount.com" `
+  --service-account="ms-graph-function-sa@gen-lang-client-0789213818.iam.gserviceaccount.com" `
+  --set-secrets="TENANT_ID=TENANT_ID:latest,CLIENT_ID=CLIENT_ID:latest,CLIENT_SECRET=CLIENT_SECRET:latest,TARGET_USER_ID=TARGET_USER_ID:latest"
+  
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+pip install -r requirements.txt
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+uvicorn app.main:app --reload
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ACTIVATION
+python -m venv venv
+.\venv\Scripts\Activate
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+docker-compose down
+docker-compose down -v // removes data
+docker-compose up --build
+docker-compose build <service_name> //when building just one
+
+netstat -ano | findstr :3000
+taskkill /PID 12120 /F
+ python run_monitor.py
+ python -m app.main_mcp_gateway
+   python test_operator_universal.py operator-browser-v1 "go to google and search for donal trump pictures, and after provide url of two pcitures"
+   python test_operator_universal.py operator-browser-v1 "find matcha prices on amazon"
+   python test_captcha_cropping.py --solve "https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fhl%3Den-AL%26source%3Dhp%26biw%3D%26bih%3D%26q%3Damazon.com%26iflsig%3DAOw8s4IAAAAAaR3HjZr1ZqK3NH_Lr-6zO3VdcmC-65TZ%26gbv%3D2%26oq%3Damazon.com%26gs_l%3Dheirloom-hp.3..0i512l8j0i512i10j0i512.2693.2693.0.3244.1.1.0.0.0.0.106.106.0j1.1.0....0...1..34.heirloom-hp..0.1.106.uRV1yRvjRSM%26sei%3DgLkdab7oLpqJxc8P0JbGEQ&hl=en-AL&q=EgSNYoyNGIHz9sgGIjCHnvVQgY9YpsdXCv-lbcZ40KakvQmkw-59V-YIaKNkDxMxfEXjkUyh6Zn37QRzn_8yAVJaAUM"
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Getting latest version from GitHub:
+
+# 1. Fetch latest updates from GitHub
+git fetch origin
+
+# 2. (Optional) Switch to your main branch if you aren't already
+git checkout main  # Or git checkout master
+
+# 3. !!! DANGER !!! Reset local branch to match GitHub, DISCARDING local changes
+git reset --hard main # Or origin/master
+
+# 4. (Optional) Remove any new untracked files/directories created locally
+git clean -fd
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CREATING NEW REPO IN GUTHUB
+# 1. Go to your project folder
+cd /path/to/your/folder
+
+# 2. Initialize Git
+git init -b main
+
+# 3. Add all files
+git add .
+
+# 4. Make your first commit
+git commit -m "Initial commit"
+
+# 5. (Go to GitHub.com and create a new, empty repo, then copy its URL)
+
+# 6. Link to the remote
+git remote add origin https://github.com/YourUsername/YourRepoName.git
+
+# 7. Push your code
+git push -u origin main
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Connecting to SSH
+
+1. Generate Your SSH Keys
+On your local computer (not the server), open a terminal and run this command if you don't already have keys. This creates your id_ed25519 (private) and id_ed25519.pub (public) keys.
+
+Bash
+
+ssh-keygen -t ed25519
+2. Create and Secure the Key File on the Server
+On the Windows server, open PowerShell as an Administrator and run the following script. Remember to paste your public key (the content of id_ed25519.pub) in the $key variable.
+
+This script creates the key file in C:\ProgramData\ssh\, a system folder that the SSH service can reliably access, and applies the correct permissions.
+
+PowerShell
+
+# --- Paste your public key string here ---
+$key = "ssh-ed25519 AAAAC3... your_email@example.com"
+
+# --- Define the system-wide location for the key file ---
+$authKeysFile = "C:\ProgramData\ssh\administrators_authorized_keys"
+
+# --- Create the file with the correct content and encoding (No BOM) ---
+$encoding = New-Object System.Text.UTF8Encoding($false)
+[System.IO.File]::WriteAllLines($authKeysFile, $key, $encoding)
+
+# --- Set strict permissions on the new file ---
+icacls.exe $authKeysFile /inheritance:r
+icacls.exe $authKeysFile /grant "SYSTEM:F"
+icacls.exe $authKeysFile /grant "BUILTIN\Administrators:F"
+
+Write-Host "SUCCESS: Centralized authorized_keys file created."
+3. Configure the SSH Server
+On the server, open Notepad as an Administrator.
+
+Open the SSH server's main configuration file: C:\ProgramData\ssh\sshd_config
+
+Scroll to the bottom and add the following block. This rule tells the SSH server exactly where to find the key for the Administrator user.
+
+Important: If your username is different, change Match User Administrator accordingly.
+
+# Tell SSH where to find the key for a specific user
+Match User Administrator
+    AuthorizedKeysFile C:/ProgramData/ssh/administrators_authorized_keys
+Save the file.
+
+4. Restart the SSH Service
+To apply your changes, open PowerShell as an Administrator on the server and run:
+
+PowerShell
+
+Restart-Service sshd
+Your SSH key login should now work correctly.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

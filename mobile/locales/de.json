@@ -1,0 +1,961 @@
+{
+  "intro": {
+    "loading": "Dein Zen-Erlebnis wird vorbereitet...",
+    "skip": "Überspringen"
+  },
+  "promo": {
+    "freeShipping": "Kostenloser Versand ab €50",
+    "discount": "10% RABATT ab €100"
+  },
+  "common": {
+    "home": "Startseite",
+    "shop": "Shop",
+    "cart": "Warenkorb",
+    "addToCart": "In den Warenkorb",
+    "buyNow": "Jetzt kaufen",
+    "buyNowHint": "Jetzt kaufen kauft nur diesen Artikel (leert den Warenkorb)",
+    "soldOut": "Ausverkauft",
+    "noImage": "Kein Bild",
+    "beginJourney": "Beginne deine Reise",
+    "loading": "Lädt...",
+    "error": "Etwas ist schief gelaufen",
+    "retry": "Erneut versuchen",
+    "viewAll": "Alle anzeigen",
+    "learnMore": "Mehr erfahren"
+  },
+  "header": {
+    "shopCollection": "Kollektion ansehen",
+    "openCart": "Warenkorb öffnen"
+  },
+  "hero": {
+    "welcome": "Willkommen bei",
+    "tagline": "Entdecke die Kunst von Matcha und Wellness",
+    "subtitle": "Premium zeremonieller Matcha, Wellness-Sets und achtsame Lebensgrundlagen für deine Zen-Reise.",
+    "shopNow": "Jetzt einkaufen",
+    "explorProducts": "Produkte entdecken"
+  },
+  "about": {
+    "discoverBaucis": "Entdecke Baucis Zen",
+    "wellnessJourney": "Wellness ist eine Reise",
+    "description": "Wir glauben an die Kraft des bewussten Lebens – jeder Moment, jede Entscheidung, jeder Atemzug ist eine Gelegenheit, inneren Frieden und äußere Harmonie zu kultivieren.",
+    "ourMission": "Unsere Mission",
+    "missionDesc": "Authentische Wellness-Erlebnisse in den Alltag bringen. Wir kuratieren Produkte, die Geist, Körper und Seele nähren und die Kunst der Selbstfürsorge für jeden zugänglich machen, der nach Balance in einer hektischen Welt sucht.",
+    "ourVision": "Unsere Vision",
+    "visionDesc": "Eine Welt, in der ganzheitliches Wohlbefinden in das Gewebe des täglichen Lebens eingewoben ist. Wir stellen uns Gemeinschaften vor, die Achtsamkeit annehmen, wo innerer Frieden und äußere Harmonie zur Grundlage eines erfüllten Lebens werden.",
+    "ourValues": "Unsere Werte",
+    "valuesDesc": "Authentizität leitet unsere Kuration. Nachhaltigkeit prägt unsere Entscheidungen. Achtsamkeit inspiriert unseren Zweck. Jedes Produkt, das wir anbieten, spiegelt unser Engagement für Qualität, Ethik und das echte Streben nach Wellness wider.",
+    "ourStory": "Unsere Geschichte",
+    "storyDesc": "Geboren aus der Leidenschaft für traditionelle Wellness-Praktiken und modernes achtsames Leben, entstand Baucis Zen, um alte Weisheiten mit zeitgenössischen Bedürfnissen zu verbinden. Wir glauben, dass jeder Momente der Ruhe verdient."
+  },
+  "products": {
+    "title": "Unsere Kollektion",
+    "subtitle": "Kuratierte Wellness-Essentials",
+    "noProducts": "Keine Produkte verfügbar",
+    "noProductsFound": "Keine Produkte gefunden",
+    "checkBackSoon": "Schau bald wieder vorbei für neue Produkte.",
+    "featured": "Empfohlen",
+    "new": "Neu eingetroffen",
+    "details": "Details ansehen",
+    "noImageAvailable": "Kein Bild verfügbar",
+    "viewImage": "Ansehen",
+    "notFoundTitle": "Produkt nicht gefunden",
+    "notFoundDescription": "Das gesuchte Produkt existiert nicht oder wurde entfernt.",
+    "backToProducts": "Zurück zu den Produkten"
+  },
+  "productDetail": {
+    "quantity": "Menge",
+    "addToCart": "In den Warenkorb",
+    "outOfStock": "Nicht auf Lager",
+    "description": "Beschreibung",
+    "ingredients": "Inhaltsstoffe",
+    "howToUse": "Anwendung",
+    "youMayAlsoLike": "Das könnte dir auch gefallen",
+    "detailsHeading": "Produktdetails",
+    "origin": "Herkunft",
+    "weight": "Gewicht",
+    "dimensions": "Abmessungen",
+    "unitMm": "mm"
+  },
+  "cart": {
+    "title": "Dein Warenkorb",
+    "empty": "Dein Warenkorb ist leer",
+    "continueShopping": "Weiter einkaufen",
+    "subtotal": "Zwischensumme",
+    "checkout": "Zur Kasse",
+    "remove": "Entfernen",
+    "itemAdded": "Artikel zum Warenkorb hinzugefügt",
+    "vatIncluded": "MwSt./Steuern im Preis enthalten",
+    "shippingNote": "Versandkosten und Lieferzeit werden an der Kasse basierend auf Ihrer Lieferadresse berechnet.",
+    "inStock": "Auf Lager",
+    "lowStock": "Wenig auf Lager",
+    "insufficientStock": "Nicht genug auf Lager",
+    "onlyXLeft": "Nur noch {count} übrig!",
+    "stockLimit": "Nur {available} auf Lager verfügbar.",
+    "stockLimitWithCart": "Nur {available} auf Lager. Du hast bereits {inCart} im Warenkorb.",
+    "allInCart": "Alle {count} verfügbaren sind in deinem Warenkorb",
+    "madeToOrder": "Auf Bestellung",
+    "preOrder": "Vorbestellung",
+    "soldOut": "Ausverkauft",
+    "days": "Tage",
+    "weeks": "Wochen",
+    "estimatedDelivery": "Lieferung ca.",
+    "preOrderNote": "Ihr Warenkorb enthält Vorbestellungen",
+    "preOrderPaymentNote": "Vorbestellungen erfordern Kartenzahlung. Nachnahme ist nicht verfügbar.",
+    "codNotAvailable": "Nicht verfügbar für Vorbestellungen",
+    "dailyLimitExceeded": "Tageslimit erreicht. Sie können heute noch {remaining} kaufen.",
+    "dailyLimitReached": "Limit von 10 erreicht."
+  },
+  "checkout": {
+    "title": "Kasse",
+    "shipping": "Versand",
+    "payment": "Zahlung",
+    "orderSummary": "Bestellübersicht",
+    "shippingAddress": "Lieferadresse",
+    "billingAddress": "Rechnungsadresse",
+    "sameAsShipping": "Wie Lieferadresse",
+    "savedAddresses": "Gespeicherte Adressen",
+    "useNewAddress": "Andere Adresse verwenden",
+    "saveAddress": "Diese Adresse für zukünftige Bestellungen speichern",
+    "continueToPayment": "Weiter zur Zahlung",
+    "addressName": "Adressname",
+    "invoiceEmail": "Rechnungs-E-Mail",
+    "invoiceEmailHint": "Diese E-Mail wird für Rechnungen und Bestellupdates verwendet",
+    "contactInfoImportant": "Bitte stellen Sie sicher, dass Ihre E-Mail und Telefonnummer korrekt sind. Unser Kurier wird diese Daten verwenden, um die Lieferung zu koordinieren und Updates bereitzustellen.",
+    "confirmAddress": "ADRESSE BESTÄTIGEN",
+    "confirmingAddress": "ADRESSE WIRD BESTÄTIGT...",
+    "requiredField": "Dieses Feld ist erforderlich",
+    "pinYourLocation": "Markiere deinen genauen Standort",
+    "useMyLocation": "Meinen Standort verwenden",
+    "locating": "Standort wird ermittelt...",
+    "locationError": "Standort konnte nicht ermittelt werden",
+    "searchAddress": "Adresse suchen",
+    "dragPinHint": "Ziehe die Markierung oder tippe auf die Karte",
+    "selectCountry": "Land auswählen",
+    "calculatingShipping": "VERSAND WIRD BERECHNET...",
+    "shippingCalculated": "VERSAND BERECHNET",
+    "calculateShipping": "VERSAND BERECHNEN",
+    "saving": "Speichern...",
+    "saveAddressButton": "Adresse speichern",
+    "calculating": "Berechnen...",
+    "enterAddressFirst": "Zuerst Adresse eingeben",
+    "estimatedDelivery": "Voraussichtliche Lieferung",
+    "includesMadeToOrder": "Enthält Artikel auf Bestellung",
+    "proceedToPayment": "WEITER ZUR ZAHLUNG",
+    "phoneRequired": "Telefonnummer ist erforderlich um fortzufahren",
+    "maxAddressesHint": "Bitte löschen oder bearbeiten Sie eine bestehende Adresse, um eine neue hinzuzufügen.",
+    "manageAddresses": "Adressen verwalten",
+    "selectCity": "Stadt auswählen",
+    "apartment": "Wohnung, Etage, etc. (optional)",
+    "firstName": "Vorname",
+    "lastName": "Nachname",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "address": "Adresse",
+    "city": "Stadt",
+    "postalCode": "Postleitzahl",
+    "country": "Land",
+    "state": "Bundesland",
+    "paymentMethod": "Zahlungsmethode",
+    "placeOrder": "Bestellung aufgeben",
+    "processing": "Wird bearbeitet...",
+    "orderConfirmed": "Bestellung bestätigt!",
+    "notAvailable": "Nicht verfügbar",
+    "thankYou": "Vielen Dank für deine Bestellung",
+    "earnPoints": "Verdiene {points} Zen-Punkte",
+    "earnPointsGeneric": "Zen-Punkte verdienen",
+    "withThisOrder": "Mit dieser Bestellung",
+    "zenPointsAddedWithOrder": "Zen-Punkte mit dieser Bestellung",
+    "vatTaxesIncluded": "MwSt. / Steuern inklusive",
+    "secure": "Sicher",
+    "protected": "Geschützt",
+    "sslSecure": "SSL-gesicherter Checkout",
+    "securePayment": "Sichere Zahlung",
+    "privacyProtected": "Datenschutz",
+    "moneyBackGuarantee": "Geld-zurück-Garantie",
+    "poweredBy": "Powered by",
+    "acceptedCards": "Akzeptierte Karten",
+    "licensedByBOA": "Lizenziert von der Bank von Albanien",
+    "shippingMethod": "Versandmethode",
+    "noShippingOptions": "Keine Versandoptionen für deine Adresse verfügbar. Bitte prüfe die Adresse oder kontaktiere den Support.",
+    "free": "Kostenlos",
+    "estimatedDeliveryShort": "Voraussichtliche Lieferung",
+    "estimatedDeliveryNote": "1-3 Werktage innerhalb Albaniens",
+    "back": "Zurück",
+    "signInOrCreate": "Anmelden / Konto erstellen",
+    "continueAsGuest": "Oder fahre unten als Gast fort",
+    "createAccountToEarn": "Erstelle ein Konto, um Punkte auf diese Bestellung zu sammeln und zukünftige Rabatte freizuschalten.",
+    "stripeRedirect": "Du wirst auf unsere sichere Zahlungsseite weitergeleitet, um den Kauf abzuschließen.",
+    "securedBy": "Gesichert von",
+    "pokPay": "POK Pay",
+    "pokPayDescription": "Mit Karte über POK bezahlen",
+    "payWithPok": "MIT POK BEZAHLEN",
+    "cardNumber": "Kartennummer",
+    "expiryDate": "Ablaufdatum",
+    "cvv": "CVV",
+    "cardholderName": "Name des Karteninhabers",
+    "invalidCardNumber": "Ungültige Kartennummer",
+    "invalidExpiry": "Ungültiges Ablaufdatum",
+    "invalidCvv": "Ungültige CVV",
+    "invalidHolderName": "Name des Karteninhabers erforderlich",
+    "creatingOrder": "Bestellung wird erstellt...",
+    "processingCard": "Karte wird verarbeitet...",
+    "verifyingCard": "Karte wird verifiziert...",
+    "awaitingVerification": "Verifizierung abschließen...",
+    "confirmingPayment": "Zahlung wird bestätigt...",
+    "secureVerification": "Sichere Verifizierung",
+    "pokSecurityNotice": "Ihre Kartendaten werden sicher von POK Pay verarbeitet",
+    "preOrderItemStatus": "{available} auf Lager, {backorder} bestellt",
+    "securityNotice": "Deine Zahlungsinformationen sind sicher und verschlüsselt",
+    "earnedPoints": "Du hast {points} Zen-Punkte verdient!",
+    "codLabel": "Nachnahme",
+    "codExactAmount": "Bitte halte den exakten Betrag bereit, wenn die Bestellung ankommt.",
+    "codExactAmountValue": "Bitte halte €{amount} bereit, wenn deine Bestellung ankommt.",
+    "confirmationEmailNote": "Wir senden dir eine Bestätigungsmail mit deinen Bestelldetails.",
+    "thankYouName": "Danke, {name}!",
+    "zenPointsEarned": "Verdiente Zen-Punkte",
+    "tierDiscount": "Stufenrabatt",
+    "viewOrder": "Meine Bestellung ansehen",
+    "orderId": "Bestellung",
+    "trackingNote": "Du erhältst eine SMS mit Tracking-Informationen, wenn deine Bestellung versendet wird.",
+    "saveAddressToAccount": "Diese Adresse in meinem Konto speichern",
+    "edit": "Bearbeiten",
+    "editingAddress": "Adresse bearbeiten",
+    "cancel": "Abbrechen",
+    "updateAddress": "Adresse aktualisieren",
+    "updateAddressFirst": "Zuerst Adresse aktualisieren",
+    "savePhoneToAccount": "Diese Telefonnummer in meinem Konto speichern",
+    "phoneWillOverwrite": "Dies ersetzt deine aktuelle Kontotelefonnummer.",
+    "phoneVerificationRequired": "Telefonverifizierung erforderlich",
+    "phoneVerification": {
+      "invalidPhone": "Bitte gib eine gültige Telefonnummer ein",
+      "sending": "Wird gesendet...",
+      "sendCode": "Bestätigungscode senden",
+      "codeSent": "Bestätigungscode gesendet an",
+      "changePhone": "Telefonnummer ändern",
+      "enterCode": "6-stelligen Code eingeben",
+      "verifying": "Wird verifiziert...",
+      "verify": "Verifizieren",
+      "resendIn": "Erneut senden in",
+      "resend": "Erneut senden",
+      "verified": "Verifiziert",
+      "phoneVerified": "Telefonnummer verifiziert",
+      "change": "Ändern",
+      "required": "Telefonverifizierung ist erforderlich, um fortzufahren",
+      "invalidCode": "Bitte gib den Bestätigungscode ein"
+    },
+    "selectLocationOnMap": "Bitte wählen Sie Ihren Standort auf der Karte",
+    "shippingRestriction": "Wir liefern nach:",
+    "invoiceRestriction": "Wir fakturieren nach:",
+    "paymentMethod": {
+      "title": "Zahlungsmethode wählen",
+      "subtitle": "Wählen Sie, wie Sie bezahlen möchten",
+      "cancel": "Abbrechen",
+      "selectMethod": "ZAHLUNGSMETHODE WÄHLEN",
+      "digital": {
+        "title": "Online bezahlen",
+        "subtitle": "Visa, Mastercard über POK",
+        "available": "VERFÜGBAR",
+        "comingSoon": "DEMNÄCHST",
+        "saveDiscount": "Sparen Sie 2,5% bei Ihrer Bestellung!",
+        "discountDesc": "Digital bezahlen und sofort Rabatt erhalten",
+        "youSave": "Sie sparen",
+        "secure": "Sichere 3DS",
+        "instant": "Sofortige Zahlung",
+        "securedBy": "Gesichert von POK - Bank von Albanien",
+        "confirmButton": "Mit Kartenzahlung fortfahren"
+      },
+      "cod": {
+        "title": "Nachnahme",
+        "subtitle": "Bei Erhalt bezahlen",
+        "available": "VERFÜGBAR",
+        "noExtraFees": "Keine zusätzlichen Gebühren",
+        "exactAmount": "Bitte passenden Betrag bereithalten",
+        "albaniaOnly": "Nur in Albanien verfügbar",
+        "notAvailable": "An Ihrem Standort nicht verfügbar",
+        "kosovoNote": "Nachnahme ist für Kosovo nicht verfügbar. Digitale Zahlungsoptionen kommen bald.",
+        "selectButton": "Nachnahme bestätigen"
+      },
+      "stripe": {
+        "title": "Kredit- / Debitkarte",
+        "subtitle": "Sichere Zahlung über Stripe",
+        "redirect": "Sie werden zu unserer sicheren Zahlungsseite weitergeleitet, um Ihren Einkauf abzuschließen.",
+        "securedBy": "Gesichert durch"
+      }
+    }
+  },
+  "footer": {
+    "rights": "Alle Rechte vorbehalten",
+    "privacy": "Datenschutz",
+    "terms": "AGB",
+    "imprint": "Impressum",
+    "shipping": "Versand",
+    "returns": "Rückgabe",
+    "withdrawal": "Widerrufsrecht",
+    "contact": "Kontakt",
+    "newsletter": "Newsletter abonnieren",
+    "emailPlaceholder": "Deine E-Mail-Adresse",
+    "subscribe": "Abonnieren"
+  },
+  "maintenance": {
+    "title": "Wir sind bald zurück!",
+    "message": "Wir führen derzeit Wartungsarbeiten durch, um dein Erlebnis zu verbessern.",
+    "checkBack": "Bitte schau später wieder vorbei."
+  },
+  "auth": {
+    "login": "Anmelden",
+    "register": "Registrieren",
+    "logout": "Abmelden",
+    "email": "E-Mail",
+    "password": "Passwort",
+    "confirmPassword": "Passwort bestätigen",
+    "firstName": "Vorname",
+    "lastName": "Nachname",
+    "phone": "Telefon",
+    "optional": "optional",
+    "forgotPassword": "Passwort vergessen?",
+    "loggingIn": "Anmeldung...",
+    "creatingAccount": "Konto wird erstellt...",
+    "noAccount": "Noch kein Konto?",
+    "registerNow": "Jetzt registrieren",
+    "haveAccount": "Bereits ein Konto?",
+    "loginHere": "Hier anmelden",
+    "welcomeBack": "Willkommen zurück",
+    "joinUs": "Werde Teil von uns",
+    "createAccount": "Konto erstellen",
+    "passwordHint": "Mindestens 8 Zeichen",
+    "passwordsNoMatch": "Passwörter stimmen nicht überein",
+    "passwordTooShort": "Passwort muss mindestens 8 Zeichen haben",
+    "signupBonus": "Erhalte 50 Zen-Punkte!",
+    "signupBonusDesc": "Erstelle ein Konto und sammle Prämien",
+    "zenPointsTitle": "Zen-Punkte sammeln",
+    "zenPointsDesc": "Verdiene 10 Punkte pro 1€ Einkauf. Schalte Rabatte frei!",
+    "greeting": "Hallo",
+    "zenPoints": "Zen-Punkte",
+    "resetsIn": "Zurückgesetzt in {days} Tagen",
+    "myOrders": "Meine Bestellungen",
+    "accountSettings": "Kontoeinstellungen",
+    "comingSoon": "Bald verfügbar"
+  },
+  "account": {
+    "title": "Mein Konto",
+    "welcome": "Willkommen zurück",
+    "dashboard": "Übersicht",
+    "addresses": "Adressen",
+    "orders": "Bestellungen",
+    "profile": "Profil",
+    "signOut": "Abmelden",
+    "zenPoints": "Zen-Punkte",
+    "earnPoints": "Verdiene 10 Punkte pro 1€ Einkauf",
+    "tier": "Stufe",
+    "currentDiscount": "Aktueller Rabatt",
+    "offAllProducts": "auf alle Produkte",
+    "pointsToNextTier": "Punkte bis zur nächsten Stufe",
+    "resetsIn": "Punkte werden in {days} Tagen zurückgesetzt",
+    "current": "Aktuell",
+    "maxTierReached": "Du hast die höchste Stufe erreicht!",
+    "defaultAddress": "Standardadresse",
+    "manage": "Verwalten",
+    "noAddressSaved": "Noch keine Adressen gespeichert",
+    "moreAddresses": "weitere Adressen",
+    "addAddress": "Adresse hinzufügen",
+    "addAddressHint": "Speichere deine Lieferadresse für schnellere Bestellungen",
+    "recentOrders": "Letzte Bestellungen",
+    "viewAll": "Alle anzeigen",
+    "noOrdersYet": "Noch keine Bestellungen",
+    "noOrdersHint": "Starte deinen Einkauf um Bestellungen zu sehen",
+    "startShopping": "Einkaufen starten",
+    "howItWorks": "So funktionieren Zen-Punkte",
+    "step1Title": "Einkaufen",
+    "step1Desc": "Verdiene 10 Punkte pro 1€ Einkauf",
+    "step2Title": "Aufsteigen",
+    "step2Desc": "Erreiche neue Stufen für größere Rabatte",
+    "step3Title": "Sparen",
+    "step3Desc": "Genieße bis zu 15% Rabatt auf alle Produkte",
+    "pointsRequired": "Benötigte Punkte",
+    "discount": "Rabatt",
+    "newAddress": "Neue Adresse",
+    "editAddress": "Adresse bearbeiten",
+    "addressLabel": "Bezeichnung",
+    "firstName": "Vorname",
+    "lastName": "Nachname",
+    "address": "Straße",
+    "apartment": "Wohnung, Etage, etc.",
+    "city": "Stadt",
+    "selectCity": "Stadt auswählen",
+    "country": "Land",
+    "postalCode": "Postleitzahl",
+    "phone": "Telefonnummer",
+    "setAsDefault": "Als Standardadresse festlegen",
+    "saveAddress": "Adresse speichern",
+    "saving": "Speichern...",
+    "cancel": "Abbrechen",
+    "default": "Standard",
+    "makeDefault": "Standard setzen",
+    "deleteAddress": "Adresse löschen",
+    "delete": "Löschen",
+    "confirmDelete": "Möchtest du diese Adresse wirklich löschen? Diese Aktion kann nicht rückgängig gemacht werden.",
+    "order": "Bestellung",
+    "items": "Artikel",
+    "item": "Artikel",
+    "each": "je",
+    "qty": "Menge",
+    "orderItems": "Bestellte Artikel",
+    "subtotal": "Zwischensumme",
+    "shipping": "Versand",
+    "discount": "Rabatt",
+    "total": "Gesamt",
+    "backToOrders": "Zurück zu Bestellungen",
+    "placedOn": "Bestellt am",
+    "estimatedDelivery": "Voraussichtliche Lieferung",
+    "shippingAddress": "Lieferadresse",
+    "noAddress": "Keine Adresse verfügbar",
+    "paymentMethod": "Zahlungsmethode",
+    "cashOnDelivery": "Nachnahme",
+    "codAmount": "Fälliger Betrag",
+    "cardPayment": "Kartenzahlung",
+    "paymentProcessed": "Zahlung erfolgreich verarbeitet",
+    "invoice": "Rechnung",
+    "downloadInvoice": "Rechnung herunterladen",
+    "orderStatuses": {
+      "pending": "Ausstehend",
+      "processing": "In Bearbeitung",
+      "shipped": "Versendet",
+      "delivered": "Geliefert",
+      "cancelled": "Storniert"
+    },
+    "needHelp": "Brauchst du Hilfe?",
+    "orderHelpText": "Bei Fragen zu deiner Bestellung kontaktiere unser Support-Team.",
+    "memberSince": "Mitglied seit",
+    "profileUpdated": "Profil erfolgreich aktualisiert",
+    "email": "E-Mail",
+    "emailManaged": "E-Mail wird über deinen Login-Anbieter verwaltet",
+    "save": "Speichern",
+    "saveChanges": "Änderungen speichern",
+    "edit": "Bearbeiten",
+    "emailVerificationRequired": "E-Mail-Änderung erfordert Verifizierung",
+    "emailVerificationNote": "Ein Bestätigungscode wird gesendet, um die neue E-Mail zu bestätigen",
+    "accountSecurity": "Kontosicherheit",
+    "securityManaged": "Deine Kontosicherheit wird über deinen Login-Anbieter verwaltet (Google, Apple oder E-Mail).",
+    "connectedWith": "Verbundenes Konto",
+    "dangerZone": "Gefahrenzone",
+    "deleteAccount": "Konto löschen",
+    "deleteAccountDesc": "Lösche dein Konto und alle zugehörigen Daten dauerhaft",
+    "deleteAccountWarning": "Diese Aktion kann nicht rückgängig gemacht werden",
+    "whyLeaving": "Warum gehst du?",
+    "selectReason": "Bitte wähle einen Grund",
+    "continue": "Weiter",
+    "back": "Zurück",
+    "typeDeleteToConfirm": "Tippe DELETE zur Bestätigung",
+    "deleteConfirmationWarning": "Dies wird dein Konto dauerhaft löschen. Du verlierst:",
+    "deleteWarning1": "Alle deine Zen-Punkte und Stufenfortschritt",
+    "deleteWarning2": "Deine gespeicherten Adressen und Einstellungen",
+    "deleteWarning3": "Zugang zu deiner Bestellhistorie",
+    "deleteAccountPermanently": "Konto löschen",
+    "addressName": "Adressname",
+    "maxAddressesReached": "Maximal 4 Adressen",
+    "editProfile": "Profil bearbeiten",
+    "changeEmail": "Ändern",
+    "verificationCode": "6-stelligen Code eingeben",
+    "verifyEmail": "E-Mail bestätigen",
+    "sendCode": "Code senden",
+    "codeSent": "Bestätigungscode gesendet an",
+    "emailChanged": "E-Mail erfolgreich aktualisiert",
+    "enterNewEmail": "Neue E-Mail-Adresse eingeben",
+    "enterValidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+    "enterValidCode": "Bitte geben Sie einen gültigen Bestätigungscode ein",
+    "pinYourLocation": "Markiere deinen genauen Standort",
+    "useMyLocation": "Meinen Standort verwenden",
+    "locating": "Standort wird ermittelt...",
+    "locationError": "Standort konnte nicht ermittelt werden",
+    "searchAddress": "Adresse suchen",
+    "dragPinHint": "Ziehe die Markierung oder tippe auf die Karte",
+    "selectCountry": "Land auswählen",
+    "selectLocationOnMap": "Bitte wählen Sie Ihren Standort auf der Karte",
+    "shippingRestriction": "Wir liefern nach:",
+    "invoiceRestriction": "Wir fakturieren nach:",
+    "language": "Sprache",
+    "selectLanguage": "Sprache auswählen",
+    "settings": "Einstellungen",
+    "notifications": "Benachrichtigungen",
+    "support": "Hilfe",
+    "signInPrompt": "Melden Sie sich an, um Ihr Konto zu verwalten, Bestellungen anzuzeigen und mehr",
+    "signOutConfirm": "Sind Sie sicher, dass Sie sich abmelden möchten?",
+    "tapToEdit": "Tippen zum Bearbeiten"
+  },
+  "game": {
+    "title": "Zen Memory",
+    "subtitle": "Finde alle Paare innerhalb von 60 Sekunden und verdiene Zen-Punkte",
+    "dailyChallenge": "Tägliche Herausforderung",
+    "signInToPlay": "Anmelden zum Spielen",
+    "signInDescription": "Erstelle ein Konto oder melde dich an, um das tägliche Memory-Spiel zu spielen und Zen-Punkte zu verdienen",
+    "signIn": "ANMELDEN",
+    "readyToPlay": "Bereit zum Spielen?",
+    "matchPairs": "Finde alle 9 Paare zum Gewinnen",
+    "timeLimit": "Du hast 60 Sekunden um das Puzzle zu lösen",
+    "winReward": "Gewinne +10 Zen-Punkte",
+    "startGame": "SPIEL STARTEN",
+    "loading": "Lädt...",
+    "moves": "Züge",
+    "pairs": "Paare",
+    "youWon": "Gewonnen!",
+    "completedIn": "Geschafft in {time}s mit {moves} Zügen",
+    "zenPoints": "Zen-Punkte",
+    "timeUp": "Zeit abgelaufen!",
+    "tryAgainTomorrow": "Keine Sorge, morgen kannst du es erneut versuchen",
+    "ok": "OK",
+    "comeBackLater": "Komm später wieder",
+    "nextGameIn": "Nächstes Spiel verfügbar in",
+    "playNow": "Jetzt spielen",
+    "totalWins": "Gewonnene Spiele",
+    "winMessage": "Dein Geist ist scharf! Matcha nährt dein Gehirn bestens.",
+    "loseMessage": "Vielleicht würde dir eine Tasse Matcha von Baucis Zen helfen, dich beim nächsten Mal besser zu konzentrieren.",
+    "shopProducts": "PRODUKTE ENTDECKEN"
+  },
+  "cookies": {
+    "title": "Wir schätzen Ihre Privatsphäre",
+    "description": "Wir verwenden Cookies, um Ihr Browsererlebnis zu verbessern, personalisierte Inhalte bereitzustellen und unseren Datenverkehr zu analysieren. Mit dem Klick auf \"Alle akzeptieren\" stimmen Sie unserer Verwendung von Cookies zu.",
+    "learnMore": "Mehr erfahren",
+    "acceptAll": "Alle akzeptieren",
+    "essentialOnly": "Nur notwendige",
+    "customize": "Anpassen",
+    "settings": {
+      "title": "Cookie-Einstellungen",
+      "required": "Erforderlich",
+      "save": "Einstellungen speichern",
+      "essential": {
+        "title": "Notwendige Cookies",
+        "desc": "Diese Cookies sind für die Funktion der Website erforderlich und können nicht deaktiviert werden. Dazu gehören Sitzungs-, Authentifizierungs- und Sicherheits-Cookies."
+      },
+      "analytics": {
+        "title": "Analyse-Cookies",
+        "desc": "Helfen uns zu verstehen, wie Besucher mit unserer Website interagieren, indem sie anonym Informationen sammeln und berichten."
+      },
+      "marketing": {
+        "title": "Marketing-Cookies",
+        "desc": "Werden verwendet, um Besucher über Websites hinweg zu verfolgen und relevante Werbung basierend auf Ihrem Surfverhalten anzuzeigen."
+      }
+    }
+  },
+  "legal": {
+    "title": "Rechtliche Informationen",
+    "subtitle": "Wichtige Richtlinien und Bedingungen zu Ihrem Schutz",
+    "backToStore": "Zurück zum Shop",
+    "lastUpdated": "Zuletzt aktualisiert",
+    "nav": {
+      "privacy": "Datenschutz",
+      "terms": "AGB",
+      "imprint": "Impressum",
+      "withdrawal": "Widerrufsrecht",
+      "shipping": "Versand",
+      "returns": "Rückgabe"
+    },
+    "privacy": {
+      "title": "Datenschutzerklärung",
+      "metaDescription": "Erfahren Sie, wie Baucis Zen Ihre persönlichen Daten gemäß DSGVO erhebt, verwendet und schützt.",
+      "intro": "Bei Baucis Zen nehmen wir Ihren Datenschutz ernst. Diese Datenschutzerklärung erklärt, wie wir Ihre Informationen erheben, verwenden, offenlegen und schützen, wenn Sie unsere Website besuchen und Einkäufe tätigen.",
+      "controller": {
+        "title": "Verantwortlicher",
+        "note": "Kontaktdaten finden Sie auf unserer Impressum-Seite."
+      },
+      "collect": {
+        "title": "Welche Daten wir erheben",
+        "account": {
+          "title": "Kontoinformationen",
+          "item1": "Name und E-Mail-Adresse",
+          "item2": "Telefonnummer (optional)",
+          "item3": "Passwort (verschlüsselt)",
+          "item4": "Kontoeinstellungen und Präferenzen"
+        },
+        "order": {
+          "title": "Bestellinformationen",
+          "item1": "Liefer- und Rechnungsadressen",
+          "item2": "Bestellhistorie und Transaktionsdetails",
+          "item3": "Zahlungsinformationen (sicher verarbeitet durch unsere Zahlungsanbieter)"
+        },
+        "technical": {
+          "title": "Technische Informationen",
+          "item1": "IP-Adresse und Browsertyp",
+          "item2": "Geräteinformationen und Betriebssystem",
+          "item3": "Cookies und ähnliche Tracking-Technologien"
+        }
+      },
+      "use": {
+        "title": "Wie wir Ihre Daten verwenden",
+        "item1": "Zur Verarbeitung und Ausführung Ihrer Bestellungen",
+        "item2": "Zur Kommunikation über Ihre Bestellungen und Ihr Konto",
+        "item3": "Zur Bereitstellung von Kundenservice",
+        "item4": "Zur Verbesserung unserer Website und Dienste",
+        "item5": "Zum Versand von Marketingmitteilungen (mit Ihrer Einwilligung)"
+      },
+      "thirdParties": {
+        "title": "Drittanbieter-Dienste",
+        "intro": "Wir arbeiten mit vertrauenswürdigen Partnern zusammen, um unsere Dienste bereitzustellen:",
+        "clerk": {
+          "name": "Clerk",
+          "purpose": "Authentifizierung und Benutzerverwaltung"
+        },
+        "cloudflare": {
+          "name": "Cloudflare",
+          "purpose": "Sicherheit, CDN und Leistungsoptimierung"
+        },
+        "vercel": {
+          "name": "Vercel",
+          "purpose": "Website-Hosting und Analysen"
+        },
+        "railway": {
+          "name": "Railway",
+          "purpose": "Backend-Infrastruktur und Datenbank"
+        },
+        "pok": {
+          "name": "POK",
+          "purpose": "Zahlungsabwicklung (Visa, Mastercard)"
+        },
+        "ultra": {
+          "name": "Ultra C.E.P SHPK",
+          "purpose": "Logistik- und Lieferpartner (erhält Name, Adresse und Telefonnummer des Empfängers)"
+        }
+      },
+      "cookies": {
+        "title": "Cookies",
+        "intro": "Wir verwenden Cookies, um Ihre Erfahrung zu verbessern:",
+        "essential": {
+          "badge": "Notwendig",
+          "title": "Notwendige Cookies",
+          "desc": "Erforderlich für Website-Funktionalität, Authentifizierung und Sicherheit."
+        },
+        "analytics": {
+          "badge": "Optional",
+          "title": "Analyse-Cookies",
+          "desc": "Helfen uns zu verstehen, wie Sie unsere Website nutzen, um sie zu verbessern."
+        }
+      },
+      "rights": {
+        "title": "Ihre Rechte (DSGVO)",
+        "intro": "Gemäß der Datenschutz-Grundverordnung haben Sie folgende Rechte:",
+        "access": {
+          "title": "Auskunftsrecht",
+          "desc": "Fordern Sie eine Kopie Ihrer persönlichen Daten an."
+        },
+        "rectification": {
+          "title": "Recht auf Berichtigung",
+          "desc": "Fordern Sie die Korrektur ungenauer Daten an."
+        },
+        "erasure": {
+          "title": "Recht auf Löschung",
+          "desc": "Fordern Sie die Löschung Ihrer persönlichen Daten an."
+        },
+        "portability": {
+          "title": "Recht auf Datenübertragbarkeit",
+          "desc": "Erhalten Sie Ihre Daten in einem strukturierten, maschinenlesbaren Format."
+        },
+        "object": {
+          "title": "Widerspruchsrecht",
+          "desc": "Widersprechen Sie der Verarbeitung Ihrer Daten für Marketing."
+        }
+      },
+      "retention": {
+        "title": "Datenspeicherung",
+        "desc": "Wir speichern Ihre persönlichen Daten nur so lange, wie es für die Zwecke erforderlich ist, für die sie erhoben wurden, einschließlich gesetzlicher, buchhalterischer oder Berichtspflichten. Bestelldaten werden in der Regel 7 Jahre für Steuerzwecke aufbewahrt."
+      },
+      "contact": {
+        "title": "Kontakt",
+        "desc": "Bei Fragen zu dieser Datenschutzerklärung oder zur Ausübung Ihrer Rechte kontaktieren Sie uns bitte:"
+      }
+    },
+    "terms": {
+      "title": "Allgemeine Geschäftsbedingungen",
+      "metaDescription": "Lesen Sie die Allgemeinen Geschäftsbedingungen für die Nutzung der Website von Baucis Zen und den Kauf unserer Produkte.",
+      "intro": "Diese Allgemeinen Geschäftsbedingungen regeln Ihre Nutzung unserer Website und den Kauf von Produkten bei Baucis Zen. Mit der Nutzung unserer Website oder einer Bestellung stimmen Sie diesen Bedingungen zu.",
+      "definitions": {
+        "title": "Definitionen",
+        "we": "Wir/Uns/Unser",
+        "weDesc": "Baucis Zen, der Betreiber dieser Website",
+        "you": "Sie/Kunde",
+        "youDesc": "Die Person, die unsere Website nutzt oder einen Kauf tätigt",
+        "products": "Produkte",
+        "productsDesc": "Waren, die auf unserer Website zum Kauf angeboten werden",
+        "order": "Bestellung",
+        "orderDesc": "Ihre Anfrage zum Kauf von Produkten bei uns"
+      },
+      "orders": {
+        "title": "Bestellungen und Verträge",
+        "para1": "Alle über unsere Website aufgegebenen Bestellungen unterliegen unserer Annahme. Ein Vertrag kommt zustande, wenn wir Ihnen eine Bestellbestätigung per E-Mail senden.",
+        "para2": "Wir behalten uns das Recht vor, Bestellungen aus Gründen wie Produktverfügbarkeit, Preisfehlern oder Betrugsverdacht abzulehnen oder zu stornieren.",
+        "para3": "Sie sind für die Richtigkeit Ihrer Bestellangaben, einschließlich Lieferadresse und Kontaktdaten, verantwortlich."
+      },
+      "prices": {
+        "title": "Preise und Zahlung",
+        "item1": "Alle Preise werden in Euro (€) angezeigt und enthalten die geltende Mehrwertsteuer.",
+        "item2": "Preise können ohne Vorankündigung geändert werden, Änderungen betreffen jedoch keine bestätigten Bestellungen.",
+        "item3": "Die Zahlung muss zum Zeitpunkt der Bestellung erfolgen, es sei denn, Nachnahme wurde gewählt."
+      },
+      "payment": {
+        "title": "Zahlungsmethoden",
+        "intro": "Wir akzeptieren folgende Zahlungsmethoden:",
+        "item1": "Kredit-/Debitkarten (Visa, Mastercard, American Express)",
+        "item2": "Nachnahme (in ausgewählten Gebieten verfügbar)"
+      },
+      "delivery": {
+        "title": "Lieferung",
+        "desc": "Bitte beachten Sie unsere Versandrichtlinie für detaillierte Informationen zu Lieferzeiten, Kosten und Verfahren."
+      },
+      "ip": {
+        "title": "Geistiges Eigentum",
+        "desc": "Alle Inhalte auf dieser Website, einschließlich Texte, Bilder, Logos und Designs, sind Eigentum von Baucis Zen und durch Urheber- und Markenrechte geschützt. Sie dürfen keine Inhalte ohne unsere schriftliche Genehmigung reproduzieren, verbreiten oder verwenden."
+      },
+      "liability": {
+        "title": "Haftungsbeschränkung",
+        "desc": "Soweit gesetzlich zulässig, haftet Baucis Zen nicht für indirekte, zufällige, besondere oder Folgeschäden, die aus Ihrer Nutzung unserer Website oder Produkte entstehen. Unsere Gesamthaftung übersteigt nicht den Betrag, den Sie für die Produkte bezahlt haben.",
+        "shippingTitle": "Haftungsgrenzen des Versandpartners",
+        "registeredLetters": "Einschreiben: Bis zu 2.000 ALL Entschädigung",
+        "parcels": "Pakete: Bis zu 5.000 ALL Entschädigung"
+      },
+      "law": {
+        "title": "Anwendbares Recht",
+        "desc": "Diese Allgemeinen Geschäftsbedingungen unterliegen den Gesetzen der Europäischen Union und insbesondere den Gesetzen des Landes, in dem Baucis Zen registriert ist. Streitigkeiten werden vor den zuständigen Gerichten dieser Gerichtsbarkeit beigelegt."
+      },
+      "changes": {
+        "title": "Änderungen der Bedingungen",
+        "desc": "Wir können diese Allgemeinen Geschäftsbedingungen von Zeit zu Zeit aktualisieren. Änderungen werden auf dieser Seite mit einem aktualisierten Revisionsdatum veröffentlicht. Die weitere Nutzung unserer Website nach Änderungen gilt als Zustimmung zu den neuen Bedingungen."
+      },
+      "contact": {
+        "title": "Kontakt",
+        "desc": "Bei Fragen zu diesen Allgemeinen Geschäftsbedingungen kontaktieren Sie uns bitte:"
+      }
+    },
+    "imprint": {
+      "title": "Impressum",
+      "metaDescription": "Rechtliche Informationen über Baucis Zen einschließlich Firmendaten, Registrierung und Kontaktinformationen.",
+      "company": {
+        "title": "Unternehmensangaben",
+        "address": "Adresse"
+      },
+      "contact": {
+        "title": "Kontakt",
+        "email": "E-Mail",
+        "phone": "Telefon"
+      },
+      "representatives": {
+        "title": "Gesetzliche Vertreter",
+        "managing": "Geschäftsführer"
+      },
+      "registration": {
+        "title": "Handelsregistereintrag",
+        "court": "Registergericht",
+        "number": "Registernummer"
+      },
+      "vat": {
+        "title": "Umsatzsteuer-Informationen",
+        "number": "USt-IdNr."
+      },
+      "dispute": {
+        "title": "Online-Streitbeilegung",
+        "para1": "Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit, die Sie hier finden:",
+        "para2": "Wir sind weder verpflichtet noch bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen."
+      },
+      "note": {
+        "title": "Hinweis",
+        "desc": "Bitte ersetzen Sie die Platzhalterwerte [in Klammern] durch Ihre tatsächlichen Unternehmensdaten vor der Veröffentlichung."
+      }
+    },
+    "withdrawal": {
+      "title": "Widerrufsbelehrung",
+      "metaDescription": "Informationen über Ihr 14-tägiges Widerrufsrecht bei Käufen bei Baucis Zen nach EU-Verbraucherrecht.",
+      "right": {
+        "title": "Ihr Widerrufsrecht",
+        "desc": "Als Verbraucher in der Europäischen Union haben Sie das Recht, innerhalb von 14 Tagen ohne Angabe von Gründen von einem Fernabsatzvertrag zurückzutreten."
+      },
+      "period": {
+        "title": "Widerrufsfrist",
+        "days": "14 Tage",
+        "desc": "Die Widerrufsfrist erlischt 14 Tage nach dem Tag, an dem Sie oder ein von Ihnen benannter Dritter (außer dem Frachtführer) die Waren physisch in Besitz genommen haben."
+      },
+      "how": {
+        "title": "Ausübung des Widerrufsrechts",
+        "para1": "Um Ihr Widerrufsrecht auszuüben, müssen Sie uns mittels einer eindeutigen Erklärung (z.B. per Post oder E-Mail) über Ihren Entschluss, den Vertrag zu widerrufen, informieren.",
+        "para2": "Sie können das unten stehende Muster-Widerrufsformular verwenden, was jedoch nicht vorgeschrieben ist. Zur Wahrung der Widerrufsfrist reicht es aus, dass Sie die Mitteilung über die Ausübung des Widerrufsrechts vor Ablauf der Widerrufsfrist absenden."
+      },
+      "effects": {
+        "title": "Folgen des Widerrufs",
+        "item1": "Wir erstatten alle von Ihnen erhaltenen Zahlungen zurück, einschließlich der Lieferkosten (mit Ausnahme der zusätzlichen Kosten, die sich daraus ergeben, dass Sie eine andere Art der Lieferung als die von uns angebotene, günstigste Standardlieferung gewählt haben).",
+        "item2": "Die Rückerstattung erfolgt unverzüglich und spätestens 14 Tage ab dem Tag, an dem wir die Mitteilung über Ihren Widerruf erhalten haben.",
+        "item3": "Wir verwenden für die Rückzahlung dasselbe Zahlungsmittel, das Sie bei der ursprünglichen Transaktion eingesetzt haben, es sei denn, Sie haben ausdrücklich etwas anderes vereinbart.",
+        "item4": "Wir können die Rückerstattung verweigern, bis wir die Waren zurückerhalten haben oder bis Sie den Nachweis erbracht haben, dass Sie die Waren zurückgesandt haben."
+      },
+      "exclusions": {
+        "title": "Ausschluss vom Widerrufsrecht",
+        "intro": "Das Widerrufsrecht gilt nicht für:",
+        "item1": "Versiegelte Waren, die aus Gründen des Gesundheitsschutzes oder der Hygiene nicht zur Rückgabe geeignet sind, wenn sie nach der Lieferung entsiegelt wurden",
+        "item2": "Waren, die nach der Lieferung untrennbar mit anderen Gegenständen vermischt wurden",
+        "item3": "Waren, die nach Ihren Spezifikationen angefertigt wurden oder eindeutig personalisiert sind"
+      },
+      "form": {
+        "title": "Muster-Widerrufsformular",
+        "intro": "Füllen Sie dieses Formular nur aus und senden Sie es zurück, wenn Sie vom Vertrag zurücktreten möchten:",
+        "to": "An",
+        "body1": "Hiermit widerrufe(n) ich/wir den von mir/uns abgeschlossenen Vertrag über den Kauf der folgenden Waren:",
+        "ordered": "Bestellt am",
+        "received": "Erhalten am",
+        "name": "Name des/der Verbraucher(s)",
+        "address": "Anschrift des/der Verbraucher(s)",
+        "date": "Datum",
+        "signature": "Unterschrift (nur bei Papierform)"
+      },
+      "contact": {
+        "title": "Kontakt für Widerruf",
+        "desc": "Senden Sie Ihre Widerrufserklärung an:"
+      }
+    },
+    "shipping": {
+      "title": "Versandrichtlinie",
+      "metaDescription": "Erfahren Sie mehr über Versandoptionen, Lieferzeiten und Kosten für Baucis Zen Bestellungen in ganz Europa.",
+      "intro": "Wir sind bestrebt, Ihre Wellness-Produkte sicher und effizient zu liefern. Unten finden Sie alle Informationen, die Sie über unsere Versandoptionen benötigen.",
+      "areas": {
+        "title": "Liefergebiete",
+        "europe": {
+          "title": "Europäische Union",
+          "desc": "Wir liefern in alle EU-Mitgliedsstaaten"
+        },
+        "albania": {
+          "title": "Albanien",
+          "desc": "Unser Heimatstandort mit schnellster Lieferung"
+        }
+      },
+      "times": {
+        "title": "Geschätzte Lieferzeiten",
+        "destination": "Zielort",
+        "standard": "Standard",
+        "express": "Express",
+        "albania": "Albanien",
+        "balkans": "Balkan-Region",
+        "euOther": "Andere EU-Länder",
+        "days": "Werktage",
+        "day": "Werktag",
+        "note": "* Lieferzeiten sind Schätzungen und können aufgrund von Zollabfertigung, Feiertagen oder unvorhergesehenen Umständen variieren."
+      },
+      "costs": {
+        "title": "Versandkosten",
+        "albania": "Albanien",
+        "standard": "Standardversand",
+        "calculated": "Berechnet an der Kasse",
+        "freeThreshold": "Bestellungen über 50€",
+        "freeDesc": "Alle Ziele",
+        "free": "KOSTENLOS"
+      },
+      "processing": {
+        "title": "Auftragsbearbeitung",
+        "item1": "Bestellungen werden Montag bis Freitag, 9:00 - 17:00 MEZ bearbeitet",
+        "item2": "Bestellungen, die vor 14:00 MEZ aufgegeben werden, werden in der Regel am selben Tag versandt",
+        "item3": "Bestellungen, die an Wochenenden oder Feiertagen aufgegeben werden, werden am nächsten Werktag bearbeitet"
+      },
+      "tracking": {
+        "title": "Sendungsverfolgung",
+        "desc": "Sobald Ihre Bestellung versandt wurde, erhalten Sie eine E-Mail mit einer Sendungsnummer. Mit dieser Nummer können Sie Ihr Paket auf der Website unseres Frachtführers verfolgen."
+      },
+      "issues": {
+        "title": "Versandprobleme",
+        "desc": "Bei Problemen mit Ihrer Lieferung kontaktieren Sie uns bitte umgehend:"
+      }
+    },
+    "returns": {
+      "title": "Rückgaberichtlinie",
+      "metaDescription": "Informationen zur Rückgabe von Produkten an Baucis Zen, Rückerstattungsprozess und Bedingungen.",
+      "intro": "Ihre Zufriedenheit ist uns wichtig. Wenn Sie mit Ihrem Kauf nicht vollständig zufrieden sind, helfen wir Ihnen gerne.",
+      "policy": {
+        "title": "Rückgaberichtlinie",
+        "desc": "Sie können die meisten Artikel innerhalb von 14 Tagen nach Lieferung gegen volle Rückerstattung zurückgeben. Die Artikel müssen unbenutzt, in der Originalverpackung und in verkaufsfähigem Zustand sein.",
+        "withdrawal": "Weitere Informationen zu Ihren gesetzlichen Rechten finden Sie auf unserer",
+        "withdrawalLink": "Widerrufsbelehrungsseite"
+      },
+      "conditions": {
+        "title": "Rückgabebedingungen",
+        "intro": "Um für eine Rückgabe berechtigt zu sein:",
+        "item1": "Artikel müssen unbenutzt und im Originalzustand sein",
+        "item2": "Artikel müssen in der unbeschädigten Originalverpackung sein",
+        "item3": "Artikel müssen innerhalb von 14 Tagen nach Erhalt Ihrer Bestellung zurückgesandt werden",
+        "item4": "Kaufnachweis (Bestellbestätigungs-E-Mail) ist erforderlich"
+      },
+      "nonReturnable": {
+        "title": "Nicht rückgabefähige Artikel",
+        "item1": "Geöffnete Lebensmittel (Matcha, Tees) aus Hygienegründen",
+        "item2": "Personalisierte oder maßgefertigte Artikel",
+        "item3": "Als Endverkauf gekennzeichnete Artikel"
+      },
+      "process": {
+        "title": "Rückgabeprozess",
+        "step1": {
+          "title": "Kontaktieren Sie uns",
+          "desc": "Senden Sie eine E-Mail an returns@baucis-zen.com mit Ihrer Bestellnummer und dem Grund für die Rückgabe"
+        },
+        "step2": {
+          "title": "Genehmigung erhalten",
+          "desc": "Wir prüfen Ihre Anfrage und senden Ihnen innerhalb von 1-2 Werktagen Rücksendeanweisungen"
+        },
+        "step3": {
+          "title": "Rücksendung versenden",
+          "desc": "Verpacken Sie die Artikel sicher und senden Sie sie an die angegebene Adresse. Bewahren Sie Ihre Sendungsnummer auf"
+        },
+        "step4": {
+          "title": "Rückerstattung erhalten",
+          "desc": "Sobald wir Ihre Rücksendung erhalten und geprüft haben, bearbeiten wir Ihre Rückerstattung"
+        }
+      },
+      "refunds": {
+        "title": "Rückerstattungen",
+        "para1": "Sobald Ihre Rücksendung eingegangen und geprüft ist, senden wir Ihnen eine E-Mail, um Sie über die Genehmigung oder Ablehnung Ihrer Rückerstattung zu informieren.",
+        "para2": "Bei Genehmigung wird Ihre Rückerstattung bearbeitet und automatisch auf Ihre ursprüngliche Zahlungsmethode angewendet.",
+        "method": "Rückerstattungsmethode",
+        "methodDesc": "Ursprüngliche Zahlungsmethode",
+        "timeline": "Bearbeitungszeit",
+        "timelineDesc": "5-10 Werktage"
+      },
+      "damaged": {
+        "title": "Beschädigte oder defekte Artikel",
+        "desc": "Wenn Sie einen beschädigten oder defekten Artikel erhalten, kontaktieren Sie uns bitte umgehend mit:",
+        "item1": "Fotos des beschädigten Artikels und der Verpackung",
+        "item2": "Ihrer Bestellnummer",
+        "item3": "Beschreibung des Problems"
+      },
+      "contact": {
+        "title": "Kontakt",
+        "desc": "Bei Fragen zu Rückgaben kontaktieren Sie uns bitte:"
+      }
+    }
+  },
+  "chat": {
+    "zenGreeting": "Finde dein Zen",
+    "zenSubtext": "Ich bin hier, um zu helfen",
+    "openChat": "Zen-Support öffnen",
+    "placeholder": "Nachricht eingeben...",
+    "send": "Senden",
+    "close": "Schließen",
+    "signInRequired": "Melde dich an, um persönlichen Zen-Support zu erhalten und deine Wellness-Reise zu verfolgen.",
+    "signIn": "Reise beginnen",
+    "signInBonus": "Erhalte 50 Zen-Punkte bei der Anmeldung!",
+    "greeting": "Namaste, {name}! Wie kann ich deine Zen-Reise heute begleiten?",
+    "friend": "Freund",
+    "typing": "formuliere Weisheit",
+    "error": "Der Weg stieß auf ein Hindernis. Bitte versuche es erneut.",
+    "rateLimit": "Nimm einen achtsamen Atemzug... dann versuche es erneut.",
+    "zenMoment": "Ein Moment der Ruhe...",
+    "contemplatingQuestion": "Kontempliere deine Frage...",
+    "proverbs": [
+      "Die Reise von tausend Meilen beginnt mit einem einzigen Schritt.",
+      "Sei still wie ein Berg und fließe wie ein Fluss.",
+      "Inmitten der Bewegung, finde Stille.",
+      "Das Hindernis ist der Weg.",
+      "Wenn du erkennst, dass nichts fehlt, gehört dir die ganze Welt.",
+      "Atme Ruhe ein, atme Anspannung aus.",
+      "Die Natur eilt nicht, und doch wird alles vollbracht.",
+      "Je stiller du wirst, desto mehr kannst du hören.",
+      "Frieden kommt von innen. Suche ihn nicht außen.",
+      "Lass los, was war. Vertraue dem, was sein wird.",
+      "Der gegenwärtige Moment ist der einzige Moment, der uns zur Verfügung steht.",
+      "Einfachheit ist die höchste Stufe der Vollendung.",
+      "Wo Frieden und Meditation sind, gibt es weder Angst noch Zweifel.",
+      "Der Geist ist alles. Was du denkst, wirst du.",
+      "Einem stillen Geist ergibt sich das ganze Universum."
+    ]
+  }
+}
+
