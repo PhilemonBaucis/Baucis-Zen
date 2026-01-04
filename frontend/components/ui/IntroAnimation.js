@@ -4,10 +4,10 @@ import { useEffect, useState, useCallback, useMemo } from 'react';
 import { useTranslations } from 'next-intl';
 import dynamic from 'next/dynamic';
 
-// Dynamically import Spline using the Next.js-specific subpath for better compatibility
-// Using @splinetool/react-spline/next for SSR support with auto-generated blurred placeholder
+// Dynamically import Spline with SSR disabled to prevent hydration issues
+// The /next subpath is not available in all versions, so we use the standard import
 const Spline = dynamic(
-  () => import('@splinetool/react-spline/next').then((mod) => mod.default),
+  () => import('@splinetool/react-spline').then((mod) => mod.default),
   {
     ssr: false,
     loading: () => null,

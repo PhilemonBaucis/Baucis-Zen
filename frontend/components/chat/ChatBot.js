@@ -26,6 +26,13 @@ export default function ChatBot() {
   const pathname = usePathname();
   const { isLoggedIn, customer, loading } = useAuth();
   const { isDrawerOpen } = useCart();
+
+  // Track if component is mounted (for SSR hydration safety)
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
   
   const [isOpen, setIsOpen] = useState(false);
   const [showSignInPrompt, setShowSignInPrompt] = useState(false);
@@ -183,12 +190,13 @@ export default function ChatBot() {
     
   }, [isLoading, isZenMoment, sendToAI, proverbs]);
   
-  if (typeof window === 'undefined') return null;
-  
   // Hide on checkout page, maintenance page, or when cart drawer is open
   const isCheckoutPage = pathname?.includes('/checkout');
   const isMaintenancePage = pathname?.includes('/maintenance');
-  if (isDrawerOpen || isCheckoutPage || isMaintenancePage) return null;
+
+  // Don't render anything until mounted (prevents SSR hydration mismatch)
+  // Also hide on checkout, maintenance pages, or when cart drawer is open
+  if (!isMounted || isDrawerOpen || isCheckoutPage || isMaintenancePage) return null;
   
   // Sign-in prompt for guests - compact brand style
   if (showSignInPrompt) {

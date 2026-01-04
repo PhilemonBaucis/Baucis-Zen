@@ -43,6 +43,16 @@ body[data-hydrated]::before {
   display: none !important;
 }
 
+/* CRITICAL: Force content visible on mobile devices regardless of React state.
+   This prevents blank screens during hydration on touch devices.
+   Uses coarse pointer (touch screens) and max-width as mobile indicators. */
+@media (pointer: coarse), (max-width: 767px) {
+  [data-content-loaded="true"] {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

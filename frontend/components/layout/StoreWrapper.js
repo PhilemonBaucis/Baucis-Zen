@@ -181,6 +181,7 @@ export default function StoreWrapper({ children }) {
 
       {/* Main Content - always visible for SSR, fades in nicely after intro on desktop */}
       {/* CRITICAL: data-content-loaded is set immediately to prevent CSS spinner on SSR */}
+      {/* CRITICAL: On mobile, we force opacity:1 via inline style to prevent blank screens */}
       <div
         data-content-loaded="true"
         className={`transition-opacity duration-500
@@ -188,6 +189,9 @@ export default function StoreWrapper({ children }) {
         style={{
           // Ensure content is interactive even during fade
           pointerEvents: 'auto',
+          // CRITICAL: Force visibility on mobile - CSS media query in globals.css also handles this
+          // but inline style as backup for edge cases
+          ...(mounted && isMobileDevice() ? { opacity: 1, visibility: 'visible' } : {}),
         }}
       >
         {children}
