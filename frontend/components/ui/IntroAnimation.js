@@ -4,11 +4,15 @@ import { useEffect, useState, useCallback, useMemo } from 'react';
 import { useTranslations } from 'next-intl';
 import dynamic from 'next/dynamic';
 
-// Dynamically import Spline to avoid SSR issues
-const Spline = dynamic(() => import('@splinetool/react-spline'), {
-  ssr: false,
-  loading: () => null,
-});
+// Dynamically import Spline using the Next.js-specific subpath for better compatibility
+// Using @splinetool/react-spline/next for SSR support with auto-generated blurred placeholder
+const Spline = dynamic(
+  () => import('@splinetool/react-spline/next').then((mod) => mod.default),
+  {
+    ssr: false,
+    loading: () => null,
+  }
+);
 
 // Spline scene URL
 // R2: https://pub-c38e558a5a5e4ecdbce8dfd1e185a8fe.r2.dev/spline/baucis_tin_/public/scene.splinecode
@@ -51,16 +55,20 @@ function detectMobile() {
       navigator.connection.effectiveType === '2g' ||
       navigator.connection.effectiveType === '3g');
 
-  // Detect iOS Safari which has issues with WebGL in some cases
-  const isIOSSafari = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+  // Detect iOS devices which have issues with WebGL in some cases
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1); // iPad with iOS 13+
+
+  // Detect any mobile browser via user agent
+  const isMobileUA = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
   // Mobile devices should skip Spline for better performance and reliability
   const isMobile = isTouchDevice && isSmallScreen;
 
   return {
     isMobile,
-    // Skip Spline on: mobile devices, reduced motion preference, low memory, slow connection, or iOS
-    shouldSkipSpline: isMobile || prefersReducedMotion || hasLowMemory || hasSlowConnection || isIOSSafari,
+    // Skip Spline on: any mobile device/browser, reduced motion preference, low memory, slow connection, or iOS
+    shouldSkipSpline: isMobile || prefersReducedMotion || hasLowMemory || hasSlowConnection || isIOS || isMobileUA,
     isLowPower: hasLowMemory || hasSlowConnection,
   };
 }
