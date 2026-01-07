@@ -41,8 +41,10 @@ const BASE_WIDTH = 1920;
 // Detect if device is mobile or has low performance indicators
 function detectMobile() {
   if (typeof window === 'undefined') {
-    return { isMobile: false, shouldSkipSpline: false, isLowPower: false };
+    return { isMobile: false, shouldSkipSpline: false, isLowPower: false, isIOSSafari: false };
   }
+
+  const ua = navigator.userAgent;
 
   // Check for touch device
   const isTouchDevice =
@@ -67,20 +69,31 @@ function detectMobile() {
       navigator.connection.effectiveType === '2g' ||
       navigator.connection.effectiveType === '3g');
 
-  // Detect iOS devices which have issues with WebGL in some cases
-  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) ||
-    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1); // iPad with iOS 13+
+  // Detect iOS devices (including iPad with iOS 13+ which reports as MacIntel)
+  const isIOS = /iPad|iPhone|iPod/.test(ua) ||
+    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
 
-  // Detect any mobile browser via user agent
-  const isMobileUA = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  // Explicit iOS Safari detection - Safari on iOS has specific WebGL/WASM quirks
+  // Safari includes "Safari" but NOT "Chrome" or "CriOS" (Chrome on iOS) or "FxiOS" (Firefox on iOS)
+  const isIOSSafari = isIOS && /Safari/.test(ua) && !/Chrome|CriOS|FxiOS|EdgiOS/.test(ua);
+
+  // Detect any mobile browser via user agent (expanded to include Samsung Internet)
+  const isMobileUA = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|SamsungBrowser/i.test(ua);
+
+  // Use navigator.userAgentData for more reliable detection if available (Chrome 90+, Edge 91+)
+  let isMobileHint = false;
+  if (navigator.userAgentData) {
+    isMobileHint = navigator.userAgentData.mobile === true;
+  }
 
   // Mobile devices should skip Spline for better performance and reliability
   const isMobile = isTouchDevice && isSmallScreen;
 
   return {
     isMobile,
-    // Skip Spline on: any mobile device/browser, reduced motion preference, low memory, slow connection, or iOS
-    shouldSkipSpline: isMobile || prefersReducedMotion || hasLowMemory || hasSlowConnection || isIOS || isMobileUA,
+    isIOSSafari,
+    // Skip Spline on: any mobile device/browser, reduced motion preference, low memory, slow connection, iOS, or userAgentData mobile hint
+    shouldSkipSpline: isMobile || prefersReducedMotion || hasLowMemory || hasSlowConnection || isIOS || isMobileUA || isMobileHint,
     isLowPower: hasLowMemory || hasSlowConnection,
   };
 }
@@ -91,7 +104,7 @@ export default function IntroAnimation({ onComplete }) {
   const [hasError, setHasError] = useState(false);
   const [zoomScale, setZoomScale] = useState(1);
   const [showSkip, setShowSkip] = useState(false);
-  const [deviceInfo, setDeviceInfo] = useState({ isMobile: false, shouldSkipSpline: false, isLowPower: false });
+  const [deviceInfo, setDeviceInfo] = useState({ isMobile: false, shouldSkipSpline: false, isLowPower: false, isIOSSafari: false });
   const t = useTranslations('intro');
 
   // Detect device capabilities on mount
@@ -233,13 +246,89 @@ export default function IntroAnimation({ onComplete }) {
           />
         </div>
       ) : (
-        /* Fallback if Spline fails - show logo */
-        <div className="absolute inset-0 flex items-center justify-center">
-          <img 
-            src="/Baucis Zen - Logo.svg" 
-            alt="Baucis Zen" 
-            className="w-48 h-48 opacity-80 animate-pulse"
+        /* Enhanced fallback if Spline fails - show animated logo with gradient background */
+        <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
+          {/* Animated gradient background */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background: 'linear-gradient(135deg, #f8fdf8 0%, #e8f5e9 25%, #c8e6c9 50%, #e8f5e9 75%, #f8fdf8 100%)',
+              backgroundSize: '400% 400%',
+              animation: 'gradientShift 4s ease infinite',
+            }}
           />
+          {/* Subtle radial glow */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background: 'radial-gradient(ellipse at center, rgba(76, 175, 80, 0.15) 0%, transparent 60%)',
+            }}
+          />
+          {/* Floating particles effect */}
+          <div className="absolute inset-0 pointer-events-none">
+            {[...Array(6)].map((_, i) => (
+              <div
+                key={i}
+                className="absolute rounded-full opacity-20"
+                style={{
+                  width: `${8 + i * 4}px`,
+                  height: `${8 + i * 4}px`,
+                  background: 'linear-gradient(135deg, #4caf50, #81c784)',
+                  left: `${15 + i * 14}%`,
+                  top: `${20 + (i % 3) * 25}%`,
+                  animation: `float ${3 + i * 0.5}s ease-in-out infinite`,
+                  animationDelay: `${i * 0.3}s`,
+                }}
+              />
+            ))}
+          </div>
+          {/* Logo with enhanced animation */}
+          <div className="relative z-10 flex flex-col items-center">
+            <img
+              src="/Baucis Zen - Logo.svg"
+              alt="Baucis Zen"
+              className="w-48 h-48"
+              style={{
+                animation: 'logoBreath 2.5s ease-in-out infinite',
+                filter: 'drop-shadow(0 4px 12px rgba(76, 175, 80, 0.2))',
+              }}
+            />
+            {/* Subtle loading indicator */}
+            <div
+              className="mt-6 h-0.5 rounded-full overflow-hidden"
+              style={{ width: '120px', background: 'rgba(76, 175, 80, 0.2)' }}
+            >
+              <div
+                className="h-full rounded-full"
+                style={{
+                  width: '40%',
+                  background: 'linear-gradient(90deg, #4caf50, #81c784)',
+                  animation: 'loadingBar 1.5s ease-in-out infinite',
+                }}
+              />
+            </div>
+          </div>
+          {/* CSS animations injected via style tag */}
+          <style jsx>{`
+            @keyframes gradientShift {
+              0% { background-position: 0% 50%; }
+              50% { background-position: 100% 50%; }
+              100% { background-position: 0% 50%; }
+            }
+            @keyframes float {
+              0%, 100% { transform: translateY(0) scale(1); }
+              50% { transform: translateY(-20px) scale(1.1); }
+            }
+            @keyframes logoBreath {
+              0%, 100% { transform: scale(1); opacity: 0.85; }
+              50% { transform: scale(1.03); opacity: 1; }
+            }
+            @keyframes loadingBar {
+              0% { transform: translateX(-100%); }
+              50% { transform: translateX(200%); }
+              100% { transform: translateX(200%); }
+            }
+          `}</style>
         </div>
       )}
 
